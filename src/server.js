@@ -2,8 +2,7 @@
 // npm packages
 import glue from 'glue';
 import handlebars from 'handlebars';
-// node
-import Path from 'path';
+
 // ours
 import config from './config';
 
