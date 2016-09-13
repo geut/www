@@ -17,8 +17,8 @@ glue.compose(config, options, (err, server) => {
 
     server.views({
         engines: { html: handlebars },
-        path: Path.join(__dirname, '/templates'),
-        layoutPath: Path.join(__dirname, '/templates/layouts')
+        path: '_templates',
+        layoutPath: '_templates/layouts'
     });
 
     server.start((error) => {
