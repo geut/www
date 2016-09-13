@@ -7,9 +7,6 @@
   ],
   "registrations": [
     {
-      "plugin":  "inert"
-    },
-    {
       "plugin": "./plugins/markdown-handler"
     },
     {
