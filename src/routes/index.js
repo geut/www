@@ -6,7 +6,7 @@ exports.register = (server, options, next) => {
     const home = { handler: { markdown: '_site/index' } };
     const about = { handler: { markdown: '_site/about' } };
 
-    GET `/          ${home}`; 
+    GET `/          ${home}`;
     GET `/about     ${about}`;
 
     next();

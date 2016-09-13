@@ -9,29 +9,31 @@ const internals = {
     cached: {},
 
     createContext(path) {
-        return ({
+        return {
             page: {
                 content: internals.cached[path]
             }
-        }); 
+        };
     }
-}; 
+};
 
 exports.register = (server, opts, next) => {
 
     server.handler('markdown', (route, options) => {
-        if ( typeof options == 'string' ) {
+        if ( typeof options === 'string' ) {
             options = { path: options };
         }
         const { path, template = 'index.html', layout = 'default' } = options;
 
-        Fs.readFile(Path.resolve(`${path}.md`), (err, data) => {            
+        Fs.readFile(Path.resolve(`${path}.md`), (err, data) => {
+            if ( err ) throw Error(`Cannot read markdown: ${path}`);
+
             internals.cached[path] = md.render(data.toString('utf8'));
         });
 
         return (request, reply) => {
             reply.view(template, internals.createContext(path), { layout });
-        }
+        };
     });
 
     next();
