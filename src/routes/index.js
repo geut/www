@@ -6,29 +6,8 @@ exports.register = (server, options, next) => {
     const home = { handler: { markdown: '_site/index' } };
     const about = { handler: { markdown: '_site/about' } };
 
-    GET `/ ${home}`; 
-    GET `/about ${about}`;
-
-    // server.route([
-    //     {
-    //         method: 'GET',
-    //         path: '/',
-    //         handler: {
-    //             markdown: {
-    //                 path: '_site/index' 
-    //             }
-    //         }
-    //     },
-    //     {
-    //         method: 'GET',
-    //         path: '/about',
-    //         handler: {
-    //             markdown: {
-    //                 path: '_site/about' 
-    //             }
-    //         }
-    //     }
-    // ]);
+    GET `/          ${home}`; 
+    GET `/about     ${about}`;
 
     next();
 };
