@@ -1,0 +1,22 @@
+{
+  "connections": [
+    {
+      "port": 3000,
+      "labels": ["www"]
+    }
+  ],
+  "registrations": [
+    {
+      "plugin":  "inert"
+    },
+    {
+      "plugin": "./plugins/markdown-handler"
+    },
+    {
+      "plugin":  "vision"
+    },
+    {
+      "plugin": "./routes"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint --quiet ./src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server --exec babel-node"
+  },
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "boom": "^4.0.0",
+    "glue": "^4.0.0",
+    "handlebars": "^4.0.5",
+    "hapi": "^15.0.2",
+    "inert": "^4.0.2",
+    "joi": "^9.0.4",
+    "markdown-it": "^7.0.1",
+    "nodemon": "^1.10.2",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-postcss": "^2.0.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node6"
+    ],
+    "plugins": [
+      "transform-object-assign",
+      "transform-object-rest-spread",
+      "add-module-exports"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "postcss",
+    "rules": {
+      "max-len": 0,
+      "no-shadow": 0
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    }
+  }
+}
