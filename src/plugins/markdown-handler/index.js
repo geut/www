@@ -1,11 +1,10 @@
 
-//node
+// node
 import Fs from 'fs';
 import Path from 'path';
 
-//npm
+// npm
 import MarkdownIt from 'markdown-it';
-
 
 const md = new MarkdownIt();
 
@@ -37,7 +36,7 @@ export const register = (server, opts, next) => {
         });
 
         return (request, reply) => {
-            reply.view(template, internals.createContext(mdPath, route), { layout });
+            reply.view(template, internals.createContext(path, route), { layout });
         };
     });
 
