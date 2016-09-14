@@ -1,11 +1,10 @@
 
-const defineRoute = (server, route) => {
-    server.route(route);
-};
+
 
 const withServer = (server) => (method) => (template, ...configs) => {
     const path = template.join('').trim();
-    defineRoute(server, Object.assign({ method, path }, ...configs));
+    const route = Object.assign({ method, path }, ...configs);
+    server.route(route);
 };
 
 export default (server) => {

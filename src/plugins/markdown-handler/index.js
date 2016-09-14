@@ -1,9 +1,13 @@
 
+//node
 import Fs from 'fs';
 import Path from 'path';
-import Markdown from 'markdown-it';
 
-const md = new Markdown();
+//npm
+import MarkdownIt from 'markdown-it';
+
+
+const md = new MarkdownIt();
 
 const internals = {
     cached: {},
@@ -18,7 +22,7 @@ const internals = {
     }
 };
 
-exports.register = (server, opts, next) => {
+export const register = (server, opts, next) => {
 
     server.handler('markdown', (route, options) => {
         if ( typeof options === 'string' ) {
@@ -33,14 +37,14 @@ exports.register = (server, opts, next) => {
         });
 
         return (request, reply) => {
-            reply.view(template, internals.createContext(path, route), { layout });
+            reply.view(template, internals.createContext(mdPath, route), { layout });
         };
     });
 
     next();
 };
 
-exports.register.attributes = {
+register.attributes = {
     name: 'markdown-handler',
     version: '1.0.0'
 };

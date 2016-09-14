@@ -1,11 +1,11 @@
 
 import router from '../lib/router';
 
-exports.register = (server, options, next) => {
+export const register = (server, options, next) => {
     const { GET } = router(server);
 
-    const home  = { handler: { markdown: '_site/index' } };
-    const about = { handler: { markdown: '_site/about' } };
+    const home      = { handler: { markdown: '_site/index' } };
+    const about     = { handler: { markdown: '_site/about' } };
     const resources = { handler: { directory: { path: '_resources' } } };
 
     GET `/resources/{v*} ${resources}`; // public resources (css, images, etc)
@@ -16,6 +16,6 @@ exports.register = (server, options, next) => {
     next();
 };
 
-exports.register.attributes = {
+register.attributes = {
     name: 'routes'
 };
