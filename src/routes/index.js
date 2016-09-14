@@ -12,7 +12,7 @@ export const register = (server, options, next) => {
 
     GET `/               ${home}  `;
     GET `/about          ${about} `;
-    
+
     next();
 };
 
