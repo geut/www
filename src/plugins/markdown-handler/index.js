@@ -8,9 +8,10 @@ const md = new Markdown();
 const internals = {
     cached: {},
 
-    createContext(path) {
+    createContext(path, route) {
         return {
             page: {
+                uri: route.path,
                 content: internals.cached[path]
             }
         };
@@ -32,7 +33,7 @@ exports.register = (server, opts, next) => {
         });
 
         return (request, reply) => {
-            reply.view(template, internals.createContext(path), { layout });
+            reply.view(template, internals.createContext(path, route), { layout });
         };
     });
 
