@@ -5,20 +5,24 @@ import Path from 'path';
 
 // npm
 import MarkdownIt from 'markdown-it';
+import fm from 'front-matter';
 
 const md = new MarkdownIt();
 
 const internals = {
-    cached: {},
+    cached: {}
+};
 
-    createContext(path, route) {
-        return {
-            page: {
-                uri: route.path,
-                content: internals.cached[path]
-            }
-        };
-    }
+const createContext = (route, page) => {
+    const { content, attributes } = page;
+    const uri = route.path;
+    return {
+        page: {
+            ...attributes,
+            content,
+            uri
+        }
+    };
 };
 
 export const register = (server, opts, next) => {
@@ -29,14 +33,18 @@ export const register = (server, opts, next) => {
         }
         const { path, template = 'index.html', layout = 'default' } = options;
 
-        Fs.readFile(Path.resolve(`${path}.md`), (err, data) => {
-            if ( err ) throw Error(`Cannot read markdown: ${path}`);
+        Fs.readFile(Path.resolve(`${path}.md`), 'utf8', (err, data) => {
+            if ( err ) {
+                throw Error(`Cannot read markdown: ${path}`);
+            }
+            const page = fm(data);
+            page.content = md.render(page.body);
 
-            internals.cached[path] = md.render(data.toString('utf8'));
+            internals.cached[path] = createContext(route, page);
         });
 
         return (request, reply) => {
-            reply.view(template, internals.createContext(path, route), { layout });
+            reply.view(template, internals.cached[path], { layout });
         };
     });
 

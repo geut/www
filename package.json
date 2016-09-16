@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint --quiet ./src",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server --exec babel-node"
+    "start": "nodemon src/server --exec babel-node --ext md,js --watch _site --watch src"
   },
   "dependencies": {
     "babel": "^6.5.2",
@@ -20,6 +20,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "boom": "^4.0.0",
+    "front-matter": "^2.1.0",
     "glue": "^4.0.0",
     "handlebars": "^4.0.5",
     "hapi": "^15.0.2",

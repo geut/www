@@ -8,10 +8,11 @@ export const register = (server, options, next) => {
     const about     = { handler: { markdown: '_site/about' } };
     const resources = { handler: { directory: { path: '_resources' } } };
 
-    GET `/resources/{v*} ${resources}`; // public resources (css, images, etc)
+    GET `/       ${home}`;
+    GET `/about  ${about}`;
 
-    GET `/               ${home}  `;
-    GET `/about          ${about} `;
+    // public resources (css, images, etc)
+    GET `/resources/{path*} ${resources}`;
 
     next();
 };
