@@ -14,12 +14,16 @@ const internals = {
     prefix: ''
 };
 
+// generates a descriptor object 
+const asType = (type) => (path) => ({ type, path });
 
+// read a file
 const read = (file) => {
     const { prefix } = internals;
     return Fs.readFileSync(Path.resolve(prefix, file), 'utf8');
 };
 
+// flatten front-matter object and render content body
 const flatten = (ctx, type) => {
     return {
         type,
@@ -32,12 +36,11 @@ const extract = ({ type, path }) => {
     const ctx = fm(read(path));
 
     return flatten( ctx, type );
-
 };
 
 const contextReducer = (prev = {}, desc ) => {
-
     const { type } = desc;
+
     switch (type) {
     case 'section':
         let section = prev.section || {};
@@ -54,14 +57,10 @@ const contextReducer = (prev = {}, desc ) => {
 };
 
 const cacheAs = (path, value) => {
-
     internals.cached[path] = value;
 };
 
 const fromCache = (path) => internals.cached[path];
-
-const asType = (type) => (path) => ({ type, path });
-
 
 // --- PLUGIN
 export const register = (server, opts, next) => {
