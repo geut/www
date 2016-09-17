@@ -1,10 +1,36 @@
+@import './fonts.css';
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;  
 }
 
+nav[role=navigation] {
+  position: absolute;
+}
+
 nav[role=navigation] ul li {
   list-style: none;
   display: inline-block;
+}
+
+/* -- HERO -- */
+.hero {
+  height: 96vh;
+  text-align: center;
+}
+
+.hero img.logo {
+  height: 70%;
+}
+
+.hero .geut {
+  font-family: 'ETH Sans';
+  font-size: 15vh;
+  margin: 10;
+}
+
+.hero .geut span {
+  font-weight: bold;
 }

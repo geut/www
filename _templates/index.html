@@ -1,5 +1,19 @@
 <main class="{{ page.name }}" role="main">
-{{{ page.content }}}
+
+
+<section class="hero">
+  <header>
+    <img src="./resources/images/logo.jpg" class="logo"/>
+  </header>
+  <h1 class="geut">GEUT <span>STUDIO</span></h1>
+   
+</section>
+
+
+<section class="central">
+  {{{ page.content }}}
+</section>
+
 
 {{#each section as |section|}}
   <section class="{{ section.name}}"> 

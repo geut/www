@@ -1,0 +1,11 @@
+  @font-face {
+    font-family: "ETH Sans";
+    src: url("../fonts/ETH Sans/EthRomainEthon.ttf");
+    font-weight: lighter;
+  }
+
+  @font-face {
+    font-family: "ETH Sans";
+    src: url("../fonts/ETH Sans/EthBlackEthon.ttf");
+    font-weight: bold;
+  }
