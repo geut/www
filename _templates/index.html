@@ -1,3 +1,10 @@
 <main class={{ page.name }}>
 {{{ page.content }}}
 </main>
+
+{{#each section}}
+  <section> 
+    <header>{{ this.name}}</header>
+    {{{this.content}}}
+  </section>
+{{/each}}

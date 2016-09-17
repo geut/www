@@ -10,7 +10,12 @@
       "plugin":  "inert"
     },
     {
-      "plugin": "./plugins/markdown-handler"
+      "plugin": {
+        "register": "./plugins/markdown-handler",
+        "options": {
+          "prefix": "_site/"
+        }
+      }
     },
     {
       "plugin":  "vision"

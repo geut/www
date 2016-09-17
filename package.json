@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "lint": "eslint --quiet ./src",
+    "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server --exec babel-node --ext md,js --watch _site --watch src"
   },
