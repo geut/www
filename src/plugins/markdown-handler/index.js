@@ -14,7 +14,7 @@ const internals = {
     prefix: ''
 };
 
-// generates a descriptor object 
+// generates a descriptor object
 const asType = (type) => (path) => ({ type, path });
 
 // read a file
