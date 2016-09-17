@@ -32,12 +32,14 @@ const flatten = (ctx, type) => {
     };
 };
 
+// extract context for descriptor
 const extract = ({ type, path }) => {
     const ctx = fm(read(path));
 
     return flatten( ctx, type );
 };
 
+// reducer to generate context object
 const contextReducer = (prev = {}, desc ) => {
     const { type } = desc;
 
@@ -56,10 +58,12 @@ const contextReducer = (prev = {}, desc ) => {
     return prev;
 };
 
+// cache value internally
 const cacheAs = (path, value) => {
     internals.cached[path] = value;
 };
 
+// retrieve context from cache for the given path
 const fromCache = (path) => internals.cached[path];
 
 // --- PLUGIN
