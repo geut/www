@@ -40,7 +40,7 @@ const extract = ({ type, path }) => {
 };
 
 // reducer to generate context object
-const contextReducer = (prev = {}, desc ) => {
+const contextReducer = (prev, desc) => {
     const { type } = desc;
 
     switch (type) {
