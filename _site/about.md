@@ -1,5 +1,5 @@
 ---
 name: about
 ---
-# About
-This is the `about` file
+# About Us
+This is the *About Us* section. Describe here who we are.

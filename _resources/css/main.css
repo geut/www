@@ -1,13 +1,20 @@
 @import './fonts.css';
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100;  
+body {
+   font-family: 'Helvetica Neue', sans-serif;
 }
 
-nav[role=navigation] {
-  position: absolute;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+body > nav[role=navigation] {
+  display: none;
+}
+
+nav[role=navigation] ul {
+  margin: 0;
+  padding: 0;
 }
 
 nav[role=navigation] ul li {
@@ -17,20 +24,44 @@ nav[role=navigation] ul li {
 
 /* -- HERO -- */
 .hero {
-  height: 96vh;
+  height: 100vh;
   text-align: center;
+  overflow: hidden;
 }
 
 .hero img.logo {
-  height: 70%;
+  height: 50vh;
+  padding: 5vh;
 }
 
 .hero .geut {
   font-family: 'ETH Sans';
   font-size: 15vh;
-  margin: 10;
+  margin: 3vh;
 }
 
 .hero .geut span {
   font-weight: bold;
+}
+
+.hero [role=navigation] li {
+  font-size: 4vh;
+  margin: 1vw;  
+}
+
+.hero [role=navigation] li a{
+  text-decoration: none;
+  color: #999;
+  font-weight: 100;  
+}
+
+/* SECTION: CENTRAL */
+
+section.central {
+  height: 70vh;
+}
+
+section.central > * {
+  width: 70vw;
+  margin: auto;    
 }

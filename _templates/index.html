@@ -6,7 +6,7 @@
     <img src="./resources/images/logo.jpg" class="logo"/>
   </header>
   <h1 class="geut">GEUT <span>STUDIO</span></h1>
-   
+   {{>menu }}
 </section>
 
 
@@ -16,8 +16,8 @@
 
 
 {{#each section as |section|}}
-  <section class="{{ section.name}}"> 
-    <header>{{ section.title }}</header>
+  <section class="{{ section.name}}">
+    <header><a id="{{ section.name}}"></a>{{ section.title }}</header>
     {{{section.content}}}
   </section>
 {{/each}}
