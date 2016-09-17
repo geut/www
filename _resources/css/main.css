@@ -2,11 +2,48 @@
 
 body {
    font-family: 'Helvetica Neue', sans-serif;
+   margin: 0;
+   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
+
+/* -- FOOTER -- */
+
+footer {
+  padding: 64px 32px 32px;
+  background: rgba(43, 43, 83, 1);
+  color: #eee;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+footer img {
+  height: 80px;
+}
+
+footer .notes {
+  margin-top: 20px;
+  text-align: center;  
+  font-size: 12px;
+}
+
+footer .geut {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 
 body > nav[role=navigation] {
   display: none;
@@ -22,6 +59,10 @@ nav[role=navigation] ul li {
   display: inline-block;
 }
 
+.geut {
+  font-family: 'ETH Sans';
+}
+
 /* -- HERO -- */
 .hero {
   height: 100vh;
@@ -35,7 +76,6 @@ nav[role=navigation] ul li {
 }
 
 .hero .geut {
-  font-family: 'ETH Sans';
   font-size: 15vh;
   margin: 3vh;
 }
