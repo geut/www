@@ -40,18 +40,23 @@ const extract = ({ type, path }) => {
 };
 
 // reducer to generate context object
-const contextReducer = (prev, desc) => {
+const contextReducer = (prev, desc, _, idx) => {
     const { type } = desc;
 
     switch (type) {
     case 'section':
         let section = prev.section || {};
+        let name = desc.name || idx;
         section[desc.name] = desc;
         prev.section = section;
         break;
     case 'page':
     default:
-        prev[type] = desc;
+        let page = prev.page;
+        prev.page = {
+            ...page,
+            ...desc
+        };
         break;
     }
 
@@ -83,7 +88,7 @@ export const register = (server, opts, next) => {
                 .map(asType('section'))
                 .concat(asType('page')(path))
                 .map(extract)
-                .reduce(contextReducer, {})
+                .reduce(contextReducer, { page: { uri: route.path } })
         );
 
         return (request, reply) => {
