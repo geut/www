@@ -34,8 +34,10 @@ footer img {
 
 footer .notes {
   margin-top: 20px;
-  text-align: center;  
-  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 100;
 }
 
 footer .geut {
@@ -91,8 +93,8 @@ nav[role=navigation] ul li {
 
 .hero [role=navigation] li a{
   text-decoration: none;
-  color: #999;
-  font-weight: 100;  
+  color: rgba(43, 43, 83, 1);
+  font-weight: 100;
 }
 
 /* SECTION: CENTRAL */
