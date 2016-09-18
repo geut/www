@@ -97,13 +97,41 @@ nav[role=navigation] ul li {
   font-weight: 100;
 }
 
-/* SECTION: CENTRAL */
+/* -- SECTIONS -- */
 
-section.central {
-  height: 70vh;
+section:not(.hero) {
+  min-height: 70vh;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.3em;  
 }
 
-section.central > * {
+section:not(.hero):nth-child(2n)  {
+  background-color: #fafafa;
+  /*background-image: linear-gradient( 0deg, white, #f0f0f0 )*/
+}
+
+section:not(.hero) > * {
   width: 70vw;
   margin: auto;    
+}
+
+section:not(.hero) > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.8em;
+  padding: 50px;
+}
+
+section:not(.hero) > h2 {
+  margin-top: -50px;
+  padding: 25px;
+}
+
+section:not(.hero) blockquote p {
+    color: rgba(43, 43, 83, 1);
+    font-size: 1.75em;
+    font-style: italic;
+    font-weight: normal;
 }

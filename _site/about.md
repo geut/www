@@ -2,4 +2,10 @@
 name: about
 ---
 # About Us
-This is the *About Us* section. Describe here who we are.
+
+## Martin Acosta (@tinchoz49)
+
+## Diego Ignacio Paez (@carax)
+
+## Maximiliano Fierro (@elmasse)
+
