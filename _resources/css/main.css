@@ -100,10 +100,11 @@ nav[role=navigation] ul li {
 /* -- SECTIONS -- */
 
 section:not(.hero) {
-  min-height: 70vh;
+  min-height: 100vh;
   text-align: center;
   font-weight: 300;
-  font-size: 1.3em;  
+  font-size: 1.3em;
+  padding: 40px;
 }
 
 section:not(.hero):nth-child(2n)  {
