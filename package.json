@@ -9,7 +9,9 @@
   "scripts": {
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/server --exec babel-node --ext md,js --watch _site --watch src"
+    "css": "postcss --config=postcss.config.js",
+    "server-dev": "nodemon src/server --exec babel-node --ext md,js,css --watch _site --watch src --watch _resources/build",
+    "start": "npm run server-dev & npm run css -- --watch"
   },
   "dependencies": {
     "babel": "^6.5.2",
@@ -31,8 +33,11 @@
     "vision": "^4.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "eslint": "^3.4.0",
-    "eslint-config-postcss": "^2.0.2"
+    "eslint-config-postcss": "^2.0.2",
+    "postcss-cli": "^2.6.0",
+    "postcss-import": "^8.1.2"
   },
   "babel": {
     "presets": [
