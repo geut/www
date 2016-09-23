@@ -1,7 +1,8 @@
 ---
 name: about
+title: About Us
 ---
-# About Us
+
 
 ## Martin Acosta (@tinchoz49)
 

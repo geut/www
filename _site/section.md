@@ -1,5 +1,6 @@
 ---
 name: section
+title: Section
 ---
-# Section
+
 What a Section is this?

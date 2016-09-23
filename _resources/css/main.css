@@ -117,6 +117,25 @@ section:not(.hero) > * {
   margin: auto;
 }
 
+section:not(.hero) > header {
+  text-align: left;
+  text-transform: uppercase;  
+}
+
+section:not(.hero) > header h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0 0 30 0;
+}
+
+section:not(.hero) > header  h2 {
+  font-weight: 200;
+  margin: 0;
+  font-size: 1em;
+  padding: 0;
+}
+
+
 section:not(.hero) > h1 {
   text-align: center;
   text-transform: uppercase;
