@@ -86,7 +86,7 @@ export const register = (server, opts, next) => {
         cacheAs(route.path,
             sections
                 .map(asType('section'))
-                .concat(asType('page')(path))
+                .concat(path ? asType('page')(path) : [])
                 .map(extract)
                 .reduce(contextReducer, { page: { uri: route.path } })
         );

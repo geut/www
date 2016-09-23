@@ -4,7 +4,7 @@ import router from '../lib/router';
 export const register = (server, options, next) => {
     const { GET } = router(server);
 
-    const home      = { handler: { markdown: { path: 'index.md', sections:['about.md', 'section.md'] } } };
+    const home      = { handler: { markdown: { sections:['index.md', 'about.md', 'section.md'] } } };
     const about     = { handler: { markdown: 'about.md' } };
     const resources = { handler: { directory: { path: '_resources' } } };
 

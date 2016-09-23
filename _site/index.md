@@ -1,9 +1,9 @@
 ---
 name: section-index
-tags: [a,b,c]
+title: Our Philosophy
+subtitle: Code With Opinions
 ---
-# Our Philosophy
-## Code With Opinions
-We are GEUT. A Software Development shop with a opinionated stack and a personal style to do thigs.
+
+We are GEUT. A Software Development Shop with an opinionated stack and a particular style to do things.
 
 > #codewithopinions

@@ -9,15 +9,18 @@
    {{>menu }}
 </section>
 
-
+<!--
 <section class="central">
   {{{ page.content }}}
-</section>
-
+</section>-->
 
 {{#each section as |section|}}
   <section class="{{ section.name}}">
-    <header><a id="{{ section.name}}"></a>{{ section.title }}</header>
+    <header>
+      <a id="{{ section.name}}"></a>
+      <h1>{{ section.title }}</h1>
+      <h2>{{ section.subtitle }}</h21>
+    </header>
     {{{section.content}}}
   </section>
 {{/each}}
