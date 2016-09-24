@@ -39,6 +39,9 @@
     "postcss-cli": "^2.6.0",
     "postcss-import": "^8.1.2"
   },
+  "engines" : {
+    "node" : ">=6.5.x"
+  },
   "babel": {
     "presets": [
       "es2015-node6"
