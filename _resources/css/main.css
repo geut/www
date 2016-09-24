@@ -10,6 +10,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
 
+.geut {
+  font-family: 'ETH Sans';
+}
+
+blockquote p {
+  border-left: 5px solid #e0e0e0;
+}
+
+
 /* -- FOOTER -- */
 
 footer {
@@ -32,20 +41,26 @@ footer img {
   height: 80px;
 }
 
-footer .notes {
-  margin-top: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 100;
-}
-
 footer .geut {
   font-size: 30px;
   text-align: center;
   padding-top: 10px;
 }
 
+footer .notes {
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 200;
+}
+
+footer .notes .geut {
+  font-size: 12px;
+  font-weight: bold;  
+}
+
+/* -- NAV -- */
 
 body > nav[role=navigation] {
   display: none;
@@ -59,10 +74,6 @@ nav[role=navigation] ul {
 nav[role=navigation] ul li {
   list-style: none;
   display: inline-block;
-}
-
-.geut {
-  font-family: 'ETH Sans';
 }
 
 /* -- HERO -- */
@@ -149,9 +160,6 @@ section:not(.hero) > h2 {
   padding: 25px;
 }
 
-section:not(.hero) blockquote p {
-    color: rgba(43, 43, 83, 1);
-    font-size: 1.75em;
-    font-style: italic;
-    font-weight: normal;
+.philosophy header {
+  margin-bottom: 150px;
 }
