@@ -9,9 +9,9 @@
   "scripts": {
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "postcss --config=postcss.config.js",
-    "server-dev": "nodemon src/server --exec babel-node --ext md,js,css --watch _site --watch src --watch _resources/build",
-    "start": "npm run server-dev & npm run css -- --watch"
+    "postcss": "postcss --config=_resources/_postcss/config.js",
+    "server": "nodemon src/server --exec babel-node",
+    "start": "npm run server & npm run postcss -- --watch"
   },
   "dependencies": {
     "babel": "^6.5.2",
