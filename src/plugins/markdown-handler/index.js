@@ -47,7 +47,7 @@ const contextReducer = (prev, desc, _, idx) => {
     case 'section':
         let section = prev.section || {};
         let name = desc.name || idx;
-        section[desc.name] = desc;
+        section[name] = desc;
         prev.section = section;
         break;
     case 'page':
