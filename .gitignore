@@ -1,3 +1,8 @@
-node_modules/
-_resources/css/main.css*
+# editors
 .vscode/
+
+# node
+node_modules/
+
+# project
+_resources/css/main.css*
