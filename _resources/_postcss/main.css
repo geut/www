@@ -131,6 +131,7 @@ section:not(.hero) > * {
 section:not(.hero) > header {
   text-align: left;
   text-transform: uppercase;  
+  margin-bottom: 150px;
 }
 
 section:not(.hero) > header h1 {
@@ -146,7 +147,6 @@ section:not(.hero) > header  h2 {
   padding: 0;
 }
 
-
 section:not(.hero) > h1 {
   text-align: center;
   text-transform: uppercase;
@@ -158,8 +158,4 @@ section:not(.hero) > h1 {
 section:not(.hero) > h2 {
   margin-top: -50px;
   padding: 25px;
-}
-
-.philosophy header {
-  margin-bottom: 150px;
 }
