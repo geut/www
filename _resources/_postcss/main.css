@@ -159,3 +159,67 @@ section:not(.hero) > h2 {
   margin-top: -50px;
   padding: 25px;
 }
+
+section:not(.hero) li {
+    list-style: none;
+}
+
+section.about {
+  text-align: left;
+}
+
+section.about header {
+  margin-bottom: 0;
+}
+
+section.about ul {
+  overflow: hidden;
+}
+
+section.about li {
+  float: left;
+  width: 50%;
+  height: 70%;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+section.about li h1 {
+  background: rgba(18,18,18, .3);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;  
+}
+
+section.about li h2 {
+  background: rgba(18,18,18, .3);
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 24px;
+}
+
+section.about li p {
+  background: rgba(18,18,18, .3);
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+section.about ul:before {
+  content: ' ';
+  float: left;
+  width: 50%;
+  height: 70%;
+  display: block;
+  background: rgba(80, 173, 94, 1);
+}
+
+section.about li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
