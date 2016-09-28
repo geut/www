@@ -6,6 +6,7 @@ import Path from 'path';
 // npm
 import MarkdownIt from 'markdown-it';
 import fm from 'front-matter';
+import boom from 'boom';
 
 const md = new MarkdownIt();
 
@@ -27,6 +28,7 @@ const read = (file) => {
 const flatten = (ctx, type) => {
     return {
         type,
+        published: true,
         ...ctx.attributes,
         content: md.render(ctx.body)
     };
@@ -39,8 +41,13 @@ const extract = ({ type, path }) => {
     return flatten( ctx, type );
 };
 
+const nonPublished = ( { type, published } ) => {    
+    return published || type === 'page';
+}; 
+
+
 // reducer to generate context object
-const contextReducer = (prev, desc, _, idx) => {
+const contextReducer = (prev, desc, idx, arr) => {
     const { type } = desc;
 
     switch (type) {
@@ -88,11 +95,19 @@ export const register = (server, opts, next) => {
                 .map(asType('section'))
                 .concat(path ? asType('page')(path) : [])
                 .map(extract)
-                .reduce(contextReducer, { page: { uri: route.path } })
+                .filter(nonPublished)
+                .reduce(contextReducer, { page: { uri: route.path, published: true } })
         );
 
         return (request, reply) => {
-            reply.view(template, fromCache(route.path), { layout });
+            const ctx = fromCache(route.path);
+
+            if (!ctx.page.published) {
+                reply(boom.notFound());
+            } else {
+                reply.view(template, ctx, { layout });
+            }
+
         };
     });
 
