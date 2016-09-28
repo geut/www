@@ -135,7 +135,7 @@ section:not(.hero) > header {
 }
 
 section:not(.hero) > header h1 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
   margin: 0 0 30 0;
 }
