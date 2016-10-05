@@ -2,7 +2,7 @@
 
 footer {
   padding: 64px 32px 32px;
-  background: rgba(43, 43, 83, 1);
+  background: var(--violetDark);
   color: #eee;
 }
 
@@ -37,4 +37,5 @@ footer .notes {
 footer .notes .geut {
   font-size: 12px;
   font-weight: bold;
+  color: var(--green);
 }

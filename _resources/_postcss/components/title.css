@@ -1,6 +1,7 @@
 #title {
   margin: 3vh;
   font-size: 12vmin;
+  color: var(--violet);
 }
 
 #title .word span {

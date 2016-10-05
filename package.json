@@ -43,6 +43,7 @@
     "exorcist": "^0.4.0",
     "mkdirp": "^0.5.1",
     "postcss-cli": "^2.6.0",
+    "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-media-minmax": "^2.1.2",
     "watchify": "^3.7.0"

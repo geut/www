@@ -23,6 +23,6 @@
 
 .hero [role=navigation] li a{
   text-decoration: none;
-  color: rgba(43, 43, 83, 1);
+  color: var(--violetDark);
   font-weight: 100;
 }
