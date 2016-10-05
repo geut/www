@@ -40,6 +40,7 @@ const animate = {
     },
 
     draw(logo) {
+        logo.style.opacity = '1';
         const paths = logo.getElementsByTagName('path');
         const draws = [];
         for (let path of paths) {
