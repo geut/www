@@ -1,0 +1,16 @@
+{
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-assign",
+      "transform-object-rest-spread"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}

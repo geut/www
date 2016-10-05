@@ -6,3 +6,8 @@ node_modules/
 
 # project
 _resources/css/main.css*
+_resources/js/index.js*
+
+npm-debug.log
+
+.DS_Store

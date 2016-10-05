@@ -1,12 +1,19 @@
 <main class="{{ page.name }}" role="main">
 
-
 <section class="hero">
   <header>
-    <img src="./resources/images/logo.png" class="logo"/>
+    {{>logo }}
   </header>
-  <h1 class="geut">GEUT <span>STUDIO</span></h1>
-   {{>menu }}
+  <h1 id="title" class="geut">
+    <span class="word">
+      <span>G</span>
+      <span>E</span>
+      <span>U</span>
+      <span>T</span>
+    </span>
+    <span class="studio">STUDIO</span>
+  </h1>
+  {{>menu }}
 </section>
 
 {{#each section as |section|}}
@@ -20,4 +27,3 @@
 {{/each}}
 
 </main>
-

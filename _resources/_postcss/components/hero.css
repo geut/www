@@ -1,0 +1,28 @@
+@import './logo';
+@import './title';
+
+/* -- HERO -- */
+.hero {
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero nav {
+  opacity: 0;
+}
+
+.hero [role=navigation] li {
+  font-size: 4vmin;
+  margin: 1vw;
+}
+
+.hero [role=navigation] li a{
+  text-decoration: none;
+  color: rgba(43, 43, 83, 1);
+  font-weight: 100;
+}

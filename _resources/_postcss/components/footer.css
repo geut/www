@@ -1,0 +1,40 @@
+/* -- FOOTER -- */
+
+footer {
+  padding: 64px 32px 32px;
+  background: rgba(43, 43, 83, 1);
+  color: #eee;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+footer img {
+  height: 80px;
+}
+
+footer .geut {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+footer .notes {
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 200;
+}
+
+footer .notes .geut {
+  font-size: 12px;
+  font-weight: bold;
+}

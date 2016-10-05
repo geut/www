@@ -1,4 +1,6 @@
-@import './fonts.css';
+@import './fonts';
+@import './components/hero';
+@import './components/footer';
 
 body {
    font-family: 'Helvetica Neue', sans-serif;
@@ -12,52 +14,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .geut {
   font-family: 'ETH Sans';
+  color: #4F5186;
 }
 
 blockquote p {
   border-left: 5px solid #e0e0e0;
-}
-
-
-/* -- FOOTER -- */
-
-footer {
-  padding: 64px 32px 32px;
-  background: rgba(43, 43, 83, 1);
-  color: #eee;
-}
-
-footer ul {
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li {
-  list-style: none;
-  display: inline-block;
-}
-
-footer img {
-  height: 80px;
-}
-
-footer .geut {
-  font-size: 30px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-footer .notes {
-  margin-top: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 200;
-}
-
-footer .notes .geut {
-  font-size: 12px;
-  font-weight: bold;  
 }
 
 /* -- NAV -- */
@@ -74,38 +35,6 @@ nav[role=navigation] ul {
 nav[role=navigation] ul li {
   list-style: none;
   display: inline-block;
-}
-
-/* -- HERO -- */
-.hero {
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero img.logo {
-  height: 50vh;
-  padding: 5vh;
-}
-
-.hero .geut {
-  font-size: 15vh;
-  margin: 3vh;
-}
-
-.hero .geut span {
-  font-weight: bold;
-}
-
-.hero [role=navigation] li {
-  font-size: 4vh;
-  margin: 1vw;
-}
-
-.hero [role=navigation] li a{
-  text-decoration: none;
-  color: rgba(43, 43, 83, 1);
-  font-weight: 100;
 }
 
 /* -- SECTIONS -- */
@@ -130,7 +59,7 @@ section:not(.hero) > * {
 
 section:not(.hero) > header {
   text-align: left;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   margin-bottom: 150px;
 }
 
@@ -191,7 +120,7 @@ section.about li h1 {
   background: rgba(18,18,18, .3);
   font-size: 32px;
   font-weight: 400;
-  line-height: 36px;  
+  line-height: 36px;
 }
 
 section.about li h2 {
