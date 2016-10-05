@@ -1,6 +1,7 @@
 import velocity from 'velocity-animate';
 
-export default function draw(element) {
+export default function draw() {
+    const element = document.querySelector('#title');
     const characters = element.querySelectorAll('.word span');
     const studio = element.querySelector('.studio');
 
