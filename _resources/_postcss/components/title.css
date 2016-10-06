@@ -11,14 +11,12 @@
   opacity: 0;
 }*/
 
-#title .word {
-  margin-right: 1.5vmin;
+#title {
   opacity: 0;
 }
 
-#title .studio {
-  margin-left: 1.5vmin;
+#title .studio:last-of-type {
+  margin-left: 3vmin;
   font-weight: bold;
   display: inline-block;
-  opacity: 0;
 }
