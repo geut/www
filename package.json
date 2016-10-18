@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postcss": "postcss --config=_resources/_postcss/config.js",
     "browserify": "mkdirp _resources/js && watchify _resources/_browserify/index.js -o 'exorcist _resources/js/index.js.map > _resources/js/index.js' -d",
-    "server": "nodemon -e js,json,html --watch _templates --watch _site src/server --exec babel-node",
+    "server": "nodemon -e js,json,html,md --watch _templates --watch _site src/server --exec babel-node",
     "start": "npm run postcss & npm run browserify & npm run server"
   },
   "dependencies": {
@@ -43,6 +43,7 @@
     "exorcist": "^0.4.0",
     "mkdirp": "^0.5.1",
     "postcss-cli": "^2.6.0",
+    "postcss-clip-path-polyfill": "^1.0.4",
     "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-media-minmax": "^2.1.2",

@@ -1,0 +1,60 @@
+.hexagrid {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.hexagrid .col > div {
+    width: 100%;
+    height: 16.5vw;
+}
+
+.hexagrid .second-row {
+    margin-top: -5%;
+}
+
+.hexagrid .second-row div:nth-child(1) .hexa-polygon {
+    background-color: var(--violetDark);
+}
+.hexagrid .second-row div:nth-child(2) .hexa-polygon {
+    background-color: var(--violet);
+}
+.hexagrid .second-row div:nth-child(3) .hexa-polygon {
+    background-color: #4C91BC;
+}
+
+.hexa {
+    width: 100%;
+    height: 100%;
+}
+
+.hexa .hexa-content {
+    padding-left: 5px;
+    font-size: 1vmax;
+    color: white;
+}
+
+.hexa .hexa-content, .hexa .hexa-content > div {
+    height: 100%;
+}
+
+.hexa .hexa-polygon {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexa .hexa-top.hexa-left {
+    float: left;
+    width: 50%;
+    height: 25%;
+    shape-outside: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3CclipPath id="p" clipPathUnits="objectBoundingBox"%3E%3Cpolygon points="0 0, 1 0, 0 1" /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E#p');
+    shape-outside: polygon(0 0, 100% 0, 0 100%);
+}
+
+.hexa .hexa-top.hexa-right {
+    float: right;
+    width: 50%;
+    height: 25%;
+    shape-outside: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3CclipPath id="p" clipPathUnits="objectBoundingBox"%3E%3Cpolygon points="0 0, 1 1, 1 0" /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E#p');
+    shape-outside: polygon(0 0, 100% 100%, 100% 0);
+}

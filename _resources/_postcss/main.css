@@ -2,6 +2,7 @@
 @import './colors';
 @import './components/hero';
 @import './components/footer';
+@import './components/hexagrid';
 
 body {
    font-family: 'Helvetica Neue', sans-serif;
@@ -60,7 +61,6 @@ section:not(.hero) > * {
 section:not(.hero) > header {
   text-align: left;
   text-transform: uppercase;
-  margin-bottom: 150px;
 }
 
 section:not(.hero) > header h1 {
@@ -123,6 +123,5 @@ section.about li img {
   border-radius: 150px;
   border: 10px solid var(--green);
   background-color: var(--violet);
-  padding: 5px;  
+  padding: 5px;
 }
-
