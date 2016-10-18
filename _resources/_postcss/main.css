@@ -61,6 +61,7 @@ section:not(.hero) > * {
 section:not(.hero) > header {
   text-align: left;
   text-transform: uppercase;
+  margin-bottom: 150px;
 }
 
 section:not(.hero) > header h1 {
@@ -97,6 +98,13 @@ section:not(.hero) li {
 
 section.about {
   text-align: left;
+}
+
+@media screen and (width <= 568px) {
+    section.about {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
 }
 
 section.about ul {

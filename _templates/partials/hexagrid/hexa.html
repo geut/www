@@ -1,15 +1,13 @@
 <div class="hexa">
-  <div class="hexa-polygon" {{#if image}} style="background-size: 100%; background-image: url({{ image }});" {{/if}}>
-    <!-- <div class="hexa-top hexa-left"></div>
-    <div class="hexa-top hexa-right"></div> -->
-    {{#if text}}
-      <div class="hexa-content">
-        <div class="grid-middle">
-            <div class="col">
-              {{ text }}
-            </div>
-        </div>
+  {{#if text}}
+    <div class="hexa-content {{#if left}} left {{/if}}">
+      <div class="grid-middle">
+          <div class="col">
+            {{ text }}
+          </div>
       </div>
-    {{/if}}
+    </div>
+  {{/if}}
+  <div class="hexa-polygon" {{#if image}} style="background-size: 100%; background-image: url({{ image }});" {{/if}}>
   </div>
 </div>
