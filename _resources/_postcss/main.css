@@ -15,7 +15,7 @@
 /* -- SECTIONS -- */
 
 section:not(.hero) {
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   font-weight: 300;
   font-size: 1.3em;
@@ -51,13 +51,13 @@ section:not(.hero) > .container > header h2 {
   padding: 0;
 }
 
-@media screen and (width <= 568px) {
+@media screen and (width <= 768px) {
   section:not(.hero) {
     height: auto;
   }
 }
 
-@media screen and (height <= 568px) {
+@media screen and (height <= 768px) {
   section:not(.hero) {
     height: auto;
   }
