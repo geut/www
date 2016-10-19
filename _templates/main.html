@@ -2,32 +2,23 @@
 
 <section class="hero">
   <header>
-    {{>logo }}
+    {{> logo }}
   </header>
   <h1 id="title" class="geut">
     GEUT <span class="studio">STUDIO</span>
   </h1>
-  {{>menu }}
+  {{> menu }}
 </section>
 
-
-<section id="about" class="about">
-  <header>
-    <h2>Meet the team</h2>
-    <h1>About Us</h1>
-  </header>
-
-  {{>hexagrid/main }}
-</section>
-
-{{#each section as |section|}}
-  <section id="{{section.name}}" class="{{section.name}}">
+<section id="{{ section.about.name }}" class="{{ section.about.name }}">
+  <div class="container">
     <header>
-      <h2>{{ section.subtitle }}</h21>
-      <h1>{{ section.title }}</h1>
+      <h2>{{ section.about.subtitle }}</h2>
+      <h1>{{ section.about.title }}</h1>
     </header>
-    {{{section.content}}}
-  </section>
-{{/each}}
+
+    {{> hexagrid/main team=section.about.team }}
+  </div>
+</section>
 
 </main>

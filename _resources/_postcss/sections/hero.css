@@ -1,7 +1,6 @@
-@import './logo';
-@import './title';
+@import '../components/logo';
+@import '../components/title';
 
-/* -- HERO -- */
 .hero {
   height: 100vh;
   text-align: center;

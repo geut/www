@@ -1,28 +1,17 @@
 <div class="hexagrid grid-center">
   <div class="col">
-    <div class="grid-center">
-      <div class="col-3_xs-8" data-push-right="off_xs-4">
-        {{>hexagrid/hexa image='https://pbs.twimg.com/profile_images/709043762530484224/UVrRVPGx.jpg' text='hola como andas todo bien? bueno que bueno me alegro mucho'}}
+    <div class="row grid-center">
+      <div class="col-6_xs-8" data-push-right="off_xs-4">
+        {{> hexagrid/hexa team.[0] }}
       </div>
     </div>
-    <div class="grid-center">
-      <div class="col-3_xs-8" data-push-left="off_xs-4">
-        {{>hexagrid/hexa image='https://pbs.twimg.com/profile_images/754780261628477444/x3x7qd9B.jpg' text='hola como andas todo bien? bueno que bueno me alegro mucho' left=true}}
+    <div class="row grid-center">
+      <div class="col-6_xs-8" data-push-left="off_xs-4">
+        {{> hexagrid/hexa team.[1] }}
       </div>
-      <div class="col-3_xs-8" data-push-right="off_xs-4">
-        {{>hexagrid/hexa image='https://pbs.twimg.com/profile_images/723557592086249472/GWX66stu.jpg' text='hola como andas todo bien? bueno que bueno me alegro mucho' }}
+      <div class="col-6_xs-8" data-push-right="off_xs-4">
+        {{> hexagrid/hexa team.[2] right=true }}
       </div>
     </div>
-    <!-- <div class="grid second-row">
-      <div class="col-3">
-        {{>hexagrid/hexa text='hola como andas todo bien? bueno que bueno me alegro mucho' }}
-      </div>
-      <div class="col-3">
-        {{>hexagrid/hexa text='hola como andas todo bien? bueno que bueno me alegro mucho' }}
-      </div>
-      <div class="col-3">
-        {{>hexagrid/hexa text='hola como andas todo bien? bueno que bueno me alegro mucho' }}
-      </div>
-    </div> -->
   </div>
 </div>

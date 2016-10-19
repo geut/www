@@ -1,13 +1,13 @@
-<div class="hexa">
+<div class="hexa {{#if right}} right {{/if}}">
   {{#if text}}
-    <div class="hexa-content {{#if left}} left {{/if}}">
+    <!-- <div class="hexa-content {{#if left}} left {{/if}}">
       <div class="grid-middle">
           <div class="col">
             {{ text }}
           </div>
       </div>
-    </div>
+    </div> -->
   {{/if}}
-  <div class="hexa-polygon" {{#if image}} style="background-size: 100%; background-image: url({{ image }});" {{/if}}>
+  <div class="hexa-polygon" {{#if image}} style="background-image: url({{ image }});" {{/if}}>
   </div>
 </div>
