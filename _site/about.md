@@ -12,7 +12,7 @@ team:
   - name: Diego Ignacio Paez
     twitter: carax
     image: https://pbs.twimg.com/profile_images/754780261628477444/x3x7qd9B.jpg
-    text: It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    text: It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
 
   - name: Maximiliano Fierro
     twitter: elmasse,

@@ -12,10 +12,8 @@
 
 .hexa .hexa-content {
     position: absolute;
-    background-color: var(--violetDark);
-    color: white;
     font-size: 2vmin;
-    width: 80%;
+    height: 100%;
     text-align: justify;
 }
 
@@ -33,14 +31,7 @@
 
 .hexagrid .row:first-child .hexa-content {
     left: 50%;
-    height: 75%;
-    width: 50%;
-    top: 0;
-}
-
-.hexagrid .row:last-child .hexa-content {
-    top: 25%;
-    height: 75%;
+    height: 100%;
 }
 
 .hexagrid .row:last-child .left .hexa-content {
@@ -87,7 +78,6 @@
 
 @media screen and (width <= 768px) {
     .hexa .hexa-content {
-        width: 75%;
         font-size: 2.5vmin;
     }
 
@@ -96,15 +86,7 @@
     }
 
     .hexagrid .row:first-child .hexa-content {
-        height: 100%;
         left: 20vmin;
-        width: 75%;
-        top: 0;
-    }
-
-    .hexagrid .row:last-child .hexa-content {
-        top: 0;
-        height: 100%;
     }
 
     .hexagrid .row:first-child .hexa {
