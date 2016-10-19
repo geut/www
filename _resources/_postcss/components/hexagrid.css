@@ -1,5 +1,6 @@
 .hexa {
     display: flex;
+    position: relative;
 }
 
 .hexa .hexa-polygon {
@@ -9,50 +10,118 @@
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-@media screen and (width <= 568px) {
-
-    .hexagrid .row:first-child .hexa {
-        box-pack: flex-start;
-        justify-content: flex-start;
-        align-items: flex-start;
-        box-align: flex-start;
-    }
-
-    .hexagrid .row:last-child .hexa {
-        box-pack: flex-end;
-        justify-content: flex-end;
-        align-items: flex-end;
-        box-align: flex-end;
-    }
-
-    .hexagrid .row:last-child .hexa.right {
-        box-pack: flex-start;
-        justify-content: flex-start;
-        align-items: flex-start;
-        box-align: flex-start;
-    }
+.hexa .hexa-content {
+    position: absolute;
+    background-color: var(--violetDark);
+    color: white;
+    font-size: 2vmin;
+    width: 80%;
+    text-align: justify;
 }
 
-@media screen and (width > 568px) {
+.hexa .hexa-content .grid-middle {
+    height: 100%;
+    margin: 0;
+}
+
+.hexa .hexa-content .col {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 22vmin;
+    padding-right: 2vmin;
+}
+
+.hexagrid .row:first-child .hexa-content {
+    left: 50%;
+    height: 75%;
+    width: 50%;
+    top: 0;
+}
+
+.hexagrid .row:last-child .hexa-content {
+    top: 25%;
+    height: 75%;
+}
+
+.hexagrid .row:last-child .left .hexa-content {
+    right: 20vmin;
+}
+
+.hexagrid .row:last-child .left .hexa-content .col {
+    padding-right: 22vmin;
+    padding-left: 2vmin;
+}
+
+.hexagrid .row:last-child .right .hexa-content .col {
+    padding-left: 22vmin;
+}
+
+.hexagrid .row:last-child .right .hexa-content {
+    left: 20vmin;
+}
+
+.hexagrid .row:last-child {
+    margin-top: -10vmin;
+}
+
+.hexagrid .row:first-child .hexa {
+    box-pack: center;
+    justify-content: center;
+    align-items: center;
+    box-align: center;
+}
+
+.hexagrid .row:last-child .left .hexa {
+    box-pack: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-align: flex-end;
+}
+
+.hexagrid .row:last-child .right .hexa {
+    box-pack: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-align: flex-start;
+}
+
+@media screen and (width <= 768px) {
+    .hexa .hexa-content {
+        width: 75%;
+        font-size: 2.5vmin;
+    }
+
     .hexagrid .row:last-child {
-        margin-top: -10vmin;
+        margin-top: 0;
+    }
+
+    .hexagrid .row:first-child .hexa-content {
+        height: 100%;
+        left: 20vmin;
+        width: 75%;
+        top: 0;
+    }
+
+    .hexagrid .row:last-child .hexa-content {
+        top: 0;
+        height: 100%;
     }
 
     .hexagrid .row:first-child .hexa {
-        box-pack: center;
-        justify-content: center;
-        align-items: center;
-        box-align: center;
+        box-pack: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
+        box-align: flex-start;
     }
 
-    .hexagrid .row:last-child .hexa {
+    .hexagrid .row:last-child .left .hexa {
         box-pack: flex-end;
         justify-content: flex-end;
         align-items: flex-end;
         box-align: flex-end;
     }
 
-    .hexagrid .row:last-child .hexa.right {
+    .hexagrid .row:last-child .right .hexa {
         box-pack: flex-start;
         justify-content: flex-start;
         align-items: flex-start;
