@@ -22,11 +22,17 @@
     margin: 0;
 }
 
-.hexa .hexa-content .col {
+.hexa .hexa-content .hexa-profile {
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 22vmin;
     padding-right: 2vmin;
+}
+
+.hexa .hexa-content .hexa-profile .social {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 3vmin;
 }
 
 .hexagrid .row:first-child .hexa-content {
@@ -38,12 +44,12 @@
     right: 20vmin;
 }
 
-.hexagrid .row:last-child .left .hexa-content .col {
+.hexagrid .row:last-child .left .hexa-content .hexa-profile {
     padding-right: 22vmin;
     padding-left: 2vmin;
 }
 
-.hexagrid .row:last-child .right .hexa-content .col {
+.hexagrid .row:last-child .right .hexa-content .hexa-profile {
     padding-left: 22vmin;
 }
 

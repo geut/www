@@ -1,13 +1,19 @@
 <div class="hexa">
-  {{#if text}}
-    <div class="hexa-content {{#if left}} left {{/if}}">
-      <div class="grid-middle">
-          <div class="col">
-            {{ text }}
-          </div>
+  <div class="hexa-content">
+    <div class="grid-middle">
+      <div class="hexa-profile col">
+        {{ text }}
+        <div class="social">
+          <a href="https://twitter.com/{{ twitter }}" title="Twitter account @{{ twitter }}" class="link" target="_blank" rel="nofollow">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/{{ github }}" title="GitHub account {{ github }}" class="link" target="_blank" rel="nofollow">
+            <i class="fa fa-github-alt" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </div>
-  {{/if}}
+  </div>
   <div class="hexa-polygon" {{#if image}} style="background-image: url({{ image }});" {{/if}}>
   </div>
 </div>

@@ -32,3 +32,20 @@ nav[role=navigation] ul li {
     list-style: none;
     display: inline-block;
 }
+
+a {
+  transition: color .4s;
+  color: #265C83;
+}
+
+/* -- links -- */
+
+a:link,
+a:visited { color: #265C83; }
+a:hover   { color: #7FDBFF; }
+a:active  {
+  transition: color .3s;
+  color: #007BE6;
+}
+
+.link { text-decoration: none; }
