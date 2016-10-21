@@ -24,6 +24,7 @@ section:not(.hero) {
 
 section:not(.hero) > .container {
   width: 80vw;
+  min-height: 100%;
   margin: 0 auto;
 }
 
