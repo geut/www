@@ -1,118 +1,67 @@
-.hexa {
-    display: flex;
-    position: relative;
+.hexa .hexa-polygon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 33%;
+    margin-right: 10px;
+    float: left;
 }
 
-.hexa .hexa-polygon {
-    width: 40vmin;
-    height: 40vmin;
-    background-size: 100%;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+.hexa.reverse .hexa-polygon {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.hexa .hexa-polygon img {
+    max-width: 100%;
+    float: left;
+    height: auto;
+    display: block;
+}
+
+.hexa.reverse .hexa-polygon {
+    float: right;
 }
 
 .hexa .hexa-content {
-    position: absolute;
-    font-size: 2vmin;
-    height: 100%;
+    padding: 10px;
+    font-size: 0.8em;
     text-align: justify;
 }
 
-.hexa .hexa-content .grid-middle {
-    height: 100%;
-    margin: 0;
+.hexa .hexa-content .social {
+    text-align: right;
+    padding-top: 10px;
+    font-size: 1em;
 }
 
-.hexa .hexa-content .hexa-profile {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 22vmin;
-    padding-right: 2vmin;
+.hexa.reverse .hexa-content .social {
+    text-align: left;
 }
 
-.hexa .hexa-content .hexa-profile .social {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 3vmin;
-}
-
-.hexagrid .row:first-child .hexa-content {
-    left: 50%;
-    height: 100%;
-}
-
-.hexagrid .row:last-child .left .hexa-content {
-    right: 20vmin;
-}
-
-.hexagrid .row:last-child .left .hexa-content .hexa-profile {
-    padding-right: 22vmin;
-    padding-left: 2vmin;
-}
-
-.hexagrid .row:last-child .right .hexa-content .hexa-profile {
-    padding-left: 22vmin;
-}
-
-.hexagrid .row:last-child .right .hexa-content {
-    left: 20vmin;
-}
-
-.hexagrid .row:last-child {
-    margin-top: -10vmin;
-}
-
-.hexagrid .row:first-child .hexa {
-    box-pack: center;
-    justify-content: center;
-    align-items: center;
-    box-align: center;
-}
-
-.hexagrid .row:last-child .left .hexa {
-    box-pack: flex-end;
-    justify-content: flex-end;
-    align-items: flex-end;
-    box-align: flex-end;
-}
-
-.hexagrid .row:last-child .right .hexa {
-    box-pack: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
-    box-align: flex-start;
-}
-
-@media screen and (width <= 768px) {
-    .hexa .hexa-content {
-        font-size: 2.5vmin;
+@media screen and (width > 1024px) {
+    .hexagrid .row:first-child [class*=grid-] {
+        margin: 0px;
     }
-
+    
+    .hexagrid .row:first-child [class*=col] {
+        padding: 0;
+    }
+    
     .hexagrid .row:last-child {
-        margin-top: 0;
+        margin-top: -3%;
     }
 
-    .hexagrid .row:first-child .hexa-content {
-        left: 20vmin;
+    .hexagrid .row:last-child > [class*=col]:first-child {
+        padding-right: 0.5%;
     }
 
-    .hexagrid .row:first-child .hexa {
-        box-pack: flex-start;
-        justify-content: flex-start;
-        align-items: flex-start;
-        box-align: flex-start;
+    .hexagrid .row:last-child > [class*=col]:last-child {
+        padding-left: 0.5%;
     }
+}
 
-    .hexagrid .row:last-child .left .hexa {
-        box-pack: flex-end;
-        justify-content: flex-end;
-        align-items: flex-end;
-        box-align: flex-end;
-    }
-
-    .hexagrid .row:last-child .right .hexa {
-        box-pack: flex-start;
-        justify-content: flex-start;
-        align-items: flex-start;
-        box-align: flex-start;
+@media screen and (width <= 1024px) {
+    .hexagrid .row:first-child > [class*=col] {
+        padding-bottom: 1rem;
     }
 }

@@ -1,15 +1,15 @@
-<div class="hexagrid grid-center">
+<div class="hexagrid grid-middle">
   <div class="col">
-    <div class="row grid-center">
-      <div class="col-12_sm-12-xs-12">
+    <div class="row grid">
+      <div class="col-6_md-12-sm-12-xs-12" data-push-left="off-5_md-0-sm-0-xs-0">
         {{> hexagrid/hexa team.[0] }}
       </div>
     </div>
     <div class="row grid-center">
-      <div class="col-6_sm-12-xs-12 left">
-        {{> hexagrid/hexa team.[1] }}
+      <div class="col-6_md-12-sm-12-xs-12">
+        {{> hexagrid/hexa team.[1] reverse=true}}
       </div>
-      <div class="col-6_sm-12-xs-12 right">
+      <div class="col-6_md-12-sm-12-xs-12">
         {{> hexagrid/hexa team.[2] }}
       </div>
     </div>
