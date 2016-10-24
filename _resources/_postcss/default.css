@@ -8,9 +8,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
 }
 
-p {
+p, .text {
   line-height: 1.55;
   margin-top: 5px;
+  font-size: 0.8em;
 }
 
 .geut {
@@ -61,10 +62,6 @@ section:not(.hero) {
   font-weight: 300;
   font-size: 1.3em;
   margin: 0 auto;
-}
-
-section:not(.hero) p, section:not(.hero) .text {
-  font-size: 0.8em;
 }
 
 section:not(.hero) > .container {
