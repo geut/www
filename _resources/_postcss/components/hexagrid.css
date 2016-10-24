@@ -1,3 +1,7 @@
+.hexagrid {
+    min-height: calc(100% - 4em - 3rem);
+}
+
 .hexa .hexa-polygon {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -23,8 +27,10 @@
 }
 
 .hexa .hexa-content {
-    padding: 10px;
-    font-size: 0.8em;
+    padding: 0px 10px 10px 10px;
+}
+
+.hexa .hexa-content p {
     text-align: justify;
 }
 
@@ -42,11 +48,11 @@
     .hexagrid .row:first-child [class*=grid-] {
         margin: 0px;
     }
-    
+
     .hexagrid .row:first-child [class*=col] {
         padding: 0;
     }
-    
+
     .hexagrid .row:last-child {
         margin-top: -3%;
     }

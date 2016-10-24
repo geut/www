@@ -41,9 +41,9 @@ const extract = ({ type, path }) => {
     return flatten( ctx, type );
 };
 
-const nonPublished = ( { type, published } ) => {    
+const nonPublished = ( { type, published } ) => {
     return published || type === 'page';
-}; 
+};
 
 
 // reducer to generate context object
@@ -101,6 +101,8 @@ export const register = (server, opts, next) => {
 
         return (request, reply) => {
             const ctx = fromCache(route.path);
+
+            ctx.crumb = server.plugins.crumb.generate(request, reply);
 
             if (!ctx.page.published) {
                 reply(boom.notFound());

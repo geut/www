@@ -1,82 +1,12 @@
 @import './fonts';
 @import './colors';
+@import 'btns/css/btns.css';
 @import './default';
 
-/* -- components -- */
-
-@import './components/footer';
+@import './components/input';
 
 /* -- sections -- */
 
 @import './sections/hero';
 @import './sections/about';
-
-
-/* -- SECTIONS -- */
-
-section:not(.hero) {
-  min-height: 100vh;
-  text-align: center;
-  font-weight: 300;
-  font-size: 1.3em;
-  margin: 0 auto;
-}
-
-section:not(.hero) > .container {
-  width: 80vw;
-  min-height: 100%;
-  margin: 0 auto;
-}
-
-section:not(.hero):nth-child(2n)  {
-  background-color: var(--grey);
-}
-
-section:not(.hero) > .container > header {
-  text-align: left;
-  text-transform: uppercase;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-section:not(.hero) > .container > header h1 {
-  font-size: 1.8em;
-  font-weight: 500;
-  margin: 0;
-}
-
-section:not(.hero) > .container > header h2 {
-  font-weight: 200;
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (width <= 768px) {
-  section:not(.hero) {
-    height: auto;
-  }
-}
-
-@media screen and (height <= 768px) {
-  section:not(.hero) {
-    height: auto;
-  }
-}
-
-/*section:not(.hero) > h1 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.8em;
-  padding: 50px;
-}
-
-section:not(.hero) > h2 {
-  margin-top: -50px;
-  padding: 25px;
-}
-
-section:not(.hero) li {
-  list-style: none;
-}*/
+@import './sections/footer';

@@ -11,13 +11,54 @@
 </section>
 
 <section id="{{ section.about.name }}" class="{{ section.about.name }}">
-  <div class="grid-1-middle container">
-    <header class="col-top">
+  <div class="container">
+    <header>
       <h2>{{ section.about.subtitle }}</h2>
       <h1>{{ section.about.title }}</h1>
     </header>
 
     {{> hexagrid/main team=section.about.team }}
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <header>
+      <h2>Ask us a question</h2>
+      <h1>Contact Us</h1>
+    </header>
+
+    <div class="grid-2-center">
+      <div class="col-6_xs-12-top contact-information text-left">
+        <p>
+          <i class="fa fa-building-o" aria-hidden="true"></i> avenida siempre viva
+        </p>
+        <p>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:contact@geutstudio.com">contact@geutstudio.com</a>
+        </p>
+      </div>
+      <div class="col-6_xs-12-middle contact-form">
+        <form class="grid-1" method="post">
+          <div class="col field">
+            <input type="text" id="name" name="name" placeholder="name*" />
+          </div>
+          <div class="col field">
+            <input type="text" id="email" name="email" placeholder="email*" />
+          </div>
+          <div class="col field">
+            <input type="text" id="company" name="company" placeholder="company" />
+          </div>
+          <div class="col field">
+            <textarea id="comment" name="comment" placeholder="comment*" rows="4"></textarea>
+          </div>
+          <div class="col">
+            <button id="send" class="btn btn--m btn--black">
+              Send my <b>question</b>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 

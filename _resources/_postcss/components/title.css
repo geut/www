@@ -4,13 +4,6 @@
   color: var(--violet);
 }
 
-/*#title .word span {
-  display: inline-block;
-  margin-right: 1vmin;
-  margin-left: 1vmin;
-  opacity: 0;
-}*/
-
 #title {
   opacity: 0;
 }
