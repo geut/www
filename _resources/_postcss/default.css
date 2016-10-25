@@ -70,6 +70,10 @@ section:not(.hero) > .container {
   margin: 0 auto;
 }
 
+section:not(.here) > .container > [class*=grid] {
+  min-height: calc(100% - 4em - 3rem);
+}
+
 section:not(.hero):nth-child(2n)  {
   background-color: var(--grey);
 }

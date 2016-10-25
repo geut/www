@@ -1,0 +1,33 @@
+.field input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px var(--grey) inset !important;
+}
+
+.field input[type="text"], .field textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+.field input[type="text"]:focus, .field textarea:focus {
+  outline: none;
+  border-bottom: solid 2px black;
+}
+
+.field.error input, .field.error textarea {
+  border: solid 1px color( var(--red) l(80%) );
+  border-bottom: solid 2px color( var(--red) l(75%) );
+}
+
+.field.error .error-message {
+  font-size: 0.8em;
+  color: color( var(--red) l(50%) );
+  margin: 5px;
+  display: block;
+}

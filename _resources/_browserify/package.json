@@ -12,5 +12,9 @@
     "transform": [
       "babelify"
     ]
+  },
+  "browser": {
+    "joi": "joi-browser",
+    "contact": "../../src/schemas/contact.js"
   }
 }

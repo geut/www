@@ -47,7 +47,7 @@ const nonPublished = ( { type, published } ) => {
 
 
 // reducer to generate context object
-const contextReducer = (prev, desc, idx, arr) => {
+const contextReducer = (prev, desc, idx) => {
     const { type } = desc;
 
     switch (type) {

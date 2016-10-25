@@ -24,7 +24,13 @@
       "plugin": "./routes"
     },
     {
-      "plugin": "crumb"
+      "plugin": {
+        "register": "crumb",
+        "options": {
+          "autoGenerate": false,
+          "restful": true
+        }
+      }
     }
   ]
 }
