@@ -98,6 +98,14 @@ section:not(.hero) > .container > header h2 {
   padding: 0;
 }
 
+section:not(.hero) h1 {
+  font-size: 1.8em;
+}
+
+section:not(.hero) h2 {
+  font-size: 1.4em;
+}
+
 @media screen and (width <= 768px) {
   section:not(.hero) {
     height: auto;
