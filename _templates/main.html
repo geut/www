@@ -10,6 +10,30 @@
   {{> menu }}
 </section>
 
+<section id="{{ section.philosophy.name }}" class="{{ section.philosophy.name }}">
+  <div class="container">
+    <header>
+      <h2>{{ section.philosophy.subtitle }}</h2>
+      <h1>{{ section.philosophy.title }}</h1>
+    </header>
+
+    {{{ content }}}
+  </div>
+</section>
+
+<section class="simple">
+  <div class="container">
+    <div class="grid-1-center">
+      <div class="col-4_md-6_xs-12-center-middle">
+        <img src="/resources/images/open-source-mini.png" alt="Open Source" class="img-responsive"/>
+      </div>
+      <div class="col-middle">
+        <h2>We’re active advocates, users and contributors of Open Source technologies and practices.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="{{ section.about.name }}" class="{{ section.about.name }}">
   <div class="container">
     <header>

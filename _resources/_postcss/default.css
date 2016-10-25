@@ -74,6 +74,10 @@ section:not(.here) > .container > [class*=grid] {
   min-height: calc(100% - 4em - 3rem);
 }
 
+section.simple > .container > [class*=grid] {
+  min-height: 100%;
+}
+
 section:not(.hero):nth-child(2n)  {
   background-color: var(--grey);
 }
@@ -132,4 +136,15 @@ section:not(.hero) h2 {
 
 .text-right {
   text-align: right;
+}
+
+img.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-open-source  {
+  max-width: 15%;
+  height: auto;
 }
