@@ -12,6 +12,7 @@ function send(data) {
     })
     .then((values) => {
         return fetch('/contact', {
+            credentials: 'same-origin',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -26,12 +27,14 @@ function send(data) {
 
 function serialize(form) {
     const map = {
-        _token: form.querySelector('[name="_token"]').value
+        _token: form.dataset.token
     };
 
     for (let elem of form.querySelectorAll('.field > *')) {
         map[elem.name] = elem.value;
     }
+
+    map['honeypot'] = form.querySelector('[name="honeypot"]').value;
 
     return map;
 }
@@ -46,8 +49,8 @@ function cleanErrors(form) {
 function showErrors(form, e) {
     if (e.details) {
         e.details.forEach((error) => {
-            const input = form.querySelector(`[name=${error.path}]`);
-            if (!input.parentNode.classList.contains('error')) {
+            const input = form.querySelector(`.field [name=${error.path}]`);
+            if (input && !input.parentNode.classList.contains('error')) {
                 input.parentNode.classList.add('error');
                 input.insertAdjacentHTML('afterend', `<span class="error-message">${error.message}</span>`);
             }

@@ -2,7 +2,10 @@
   "connections": [
     {
       "port": 3000,
-      "labels": ["www"]
+      "labels": ["www"],
+      "routes": {
+        "cors": true
+      }
     }
   ],
   "registrations": [
@@ -27,8 +30,16 @@
       "plugin": {
         "register": "crumb",
         "options": {
-          "autoGenerate": false,
-          "restful": true
+          "restful": true,
+          "cookieOptions": {
+            "$filter": "env",
+            "$default": {
+              "isSecure": false
+            },
+            "production": {
+              "isSecure": true
+            }
+          }
         }
       }
     }

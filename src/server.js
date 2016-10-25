@@ -1,17 +1,17 @@
-
 // npm packages
 import glue from 'glue';
 import handlebars from 'handlebars';
+import Confidence from 'confidence';
 
-// ours
-import config from './config';
+const store = new Confidence.Store();
+store.load(require('./config'));
 
 // variables
 const options = {
     relativeTo: __dirname
 };
 
-glue.compose(config, options, (err, server) => {
+glue.compose(store.get('/', { env: process.env.NODE_ENV }), options, (err, server) => {
     if (err) return;
 
     server.views({

@@ -102,8 +102,6 @@ export const register = (server, opts, next) => {
         return (request, reply) => {
             const ctx = fromCache(route.path);
 
-            ctx.crumb = server.plugins.crumb.generate(request, reply);
-
             if (!ctx.page.published) {
                 reply(boom.notFound());
             } else {

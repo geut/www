@@ -62,8 +62,10 @@
         </div>
       </div>
       <div class="col-6_sm-12-middle contact-form">
-        <form class="grid-1" method="post">
-          <input type="hidden" id="_token" name="_token" value="{{ crumb }}"/>
+        <form class="grid-1" method="post" data-token="{{ crumb }}">
+          <div style="display: none;">
+            <input type="text" id="honeypot" name="honeypot" value=""/>
+          </div>
 
           <div class="col field">
             <input type="text" id="name" name="name" placeholder="name*" />

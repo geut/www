@@ -23,6 +23,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "boom": "^4.1.0",
+    "confidence": "^3.0.2",
     "crumb": "^6.0.3",
     "front-matter": "^2.1.0",
     "glue": "^4.0.0",
