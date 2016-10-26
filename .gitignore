@@ -11,3 +11,7 @@ _resources/js/index.js*
 npm-debug.log
 
 .DS_Store
+
+.env
+
+logs

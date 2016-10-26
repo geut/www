@@ -1,47 +1,82 @@
 {
   "connections": [
-    {
-      "port": 3000,
-      "labels": ["www"],
-      "routes": {
-        "cors": true
+  {
+    "port": 3000,
+    "labels": ["www"],
+    "routes": {
+      "cors": true
+    }
+  }],
+  "registrations": [
+  {
+    "plugin": "inert"
+  },
+  {
+    "plugin": {
+      "register": "./plugins/markdown-handler",
+      "options": {
+        "prefix": "_site/"
       }
     }
-  ],
-  "registrations": [
-    {
-      "plugin":  "inert"
-    },
-    {
-      "plugin": {
-        "register": "./plugins/markdown-handler",
-        "options": {
-          "prefix": "_site/"
-        }
-      }
-    },
-    {
-      "plugin":  "vision"
-    },
-    {
-      "plugin": "./routes"
-    },
-    {
-      "plugin": {
-        "register": "crumb",
-        "options": {
-          "restful": true,
-          "cookieOptions": {
-            "$filter": "env",
-            "$default": {
-              "isSecure": false
-            },
-            "production": {
-              "isSecure": true
-            }
+  },
+  {
+    "plugin": "vision"
+  },
+  {
+    "plugin": "./routes"
+  },
+  {
+    "plugin": {
+      "register": "crumb",
+      "options": {
+        "restful": true,
+        "cookieOptions": {
+          "$filter": "env",
+          "$default": {
+            "isSecure": false
+          },
+          "production": {
+            "isSecure": true
           }
         }
       }
     }
-  ]
+  },
+  {
+    "plugin": {
+      "register": "good",
+      "options": {
+        "ops": false,
+        "reporters": {
+          "file": [{
+            "module": "good-squeeze",
+            "name": "Squeeze",
+            "args": [{
+              "log": "*",
+              "error": "*",
+              "request": "*"
+            }]
+          }, {
+            "module": "good-squeeze",
+            "name": "SafeJson",
+            "args": [
+              null,
+              {
+                "separator": ","
+              }
+            ]
+          }, {
+            "module": "rotating-file-stream",
+            "args": [
+              "ops_log",
+              {
+                "size": "2M",
+                "path": "./logs"
+              }
+            ]
+          }]
+        }
+      }
+    }
+  }]
 }

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // npm packages
 import glue from 'glue';
 import handlebars from 'handlebars';
