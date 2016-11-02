@@ -5,9 +5,17 @@
     "labels": ["www"],
     "routes": {
       "cors": {
-        "origin": ["*"],
-        "additionalHeaders": ["X-CSRF-Token"],
-        "credentials": true
+        "$filter": "env",
+        "$base": {
+          "additionalHeaders": ["X-CSRF-Token"],
+          "credentials": true
+        },
+        "$default": {
+          "origin": ["http://localhost:3000"]
+        },
+        "production": {
+          "origin": ["https://geutstudio.com"]
+        }
       }
     }
   }],
