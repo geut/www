@@ -1,0 +1,69 @@
+{
+  "connections": [
+  {
+    "port": 3002,
+    "labels": ["www"],
+    "routes": {
+      "cors": {
+        "origin": ["*"],
+        "additionalHeaders": ["X-CSRF-Token"],
+        "credentials": true
+      }
+    }
+  }],
+  "registrations": [
+  {
+    "plugin": {
+      "register": "crumb",
+      "options": {
+        "restful": true,
+        "cookieOptions": {
+          "$filter": "env",
+          "$default": {
+            "isSecure": false
+          },
+          "production": {
+            "isSecure": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "plugin": {
+      "register": "good",
+      "options": {
+        "ops": false,
+        "reporters": {
+          "file": [{
+            "module": "good-squeeze",
+            "name": "Squeeze",
+            "args": [{
+              "log": "*",
+              "error": "*",
+              "request": "*"
+            }]
+          }, {
+            "module": "good-squeeze",
+            "name": "SafeJson",
+            "args": [
+              null,
+              {
+                "separator": ","
+              }
+            ]
+          }, {
+            "module": "rotating-file-stream",
+            "args": [
+              "ops_log",
+              {
+                "size": "2M",
+                "path": "./logs"
+              }
+            ]
+          }]
+        }
+      }
+    }
+  }]
+}

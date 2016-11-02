@@ -1,0 +1,18 @@
+<div class="grid-middle hexa {{#if reverse}}reverse{{/if}}">
+  <div class="col-12">
+    <div class="hexa-polygon">
+      <img src="{{ image }}" alt="Image for {{ twitter }}" />
+    </div>
+    <div class="hexa-content">
+      <div class="name text strong">
+        {{ name }} (<a href="https://twitter.com/{{ twitter }}" target="_blank" rel="nofollow">@{{ twitter }}</a>)
+        <a href="https://github.com/{{ github }}" title="GitHub account {{ github }}" class="link" target="_blank" rel="nofollow">
+          <i class="fa fa-github-alt" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p>
+        {{ text }}
+      </p>
+    </div>
+  </div>
+</div>

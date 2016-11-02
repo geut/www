@@ -1,0 +1,69 @@
+.hexa .hexa-polygon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 33%;
+    margin-right: 10px;
+    float: left;
+}
+
+.hexa.reverse .hexa-polygon {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.hexa .hexa-polygon img {
+    max-width: 100%;
+    float: left;
+    height: auto;
+    display: block;
+}
+
+.hexa.reverse .hexa-polygon {
+    float: right;
+}
+
+.hexa .hexa-content {
+    padding: 0px 10px 10px 10px;
+}
+
+.hexa .hexa-content p {
+    text-align: justify;
+}
+
+.hexa .hexa-content .social {
+    text-align: right;
+    padding-top: 10px;
+    font-size: 1em;
+}
+
+.hexa.reverse .hexa-content .social {
+    text-align: left;
+}
+
+@media screen and (width > 1024px) {
+    .hexagrid .row:first-child [class*=grid-] {
+        margin: 0px;
+    }
+
+    .hexagrid .row:first-child [class*=col] {
+        padding: 0;
+    }
+
+    .hexagrid .row:last-child {
+        margin-top: -3%;
+    }
+
+    .hexagrid .row:last-child > [class*=col]:first-child {
+        padding-right: 0.5%;
+    }
+
+    .hexagrid .row:last-child > [class*=col]:last-child {
+        padding-left: 0.5%;
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .hexagrid .row:first-child > [class*=col] {
+        padding-bottom: 1rem;
+    }
+}

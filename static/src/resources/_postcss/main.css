@@ -1,0 +1,12 @@
+@import './fonts';
+@import './colors';
+@import 'btns/css/btns.css';
+@import './default';
+
+@import './components/form';
+
+/* -- sections -- */
+
+@import './sections/hero';
+@import './sections/about';
+@import './sections/footer';

@@ -1,0 +1,15 @@
+#title {
+  margin: 3vh;
+  font-size: 12vmin;
+  color: var(--violet);
+}
+
+#title {
+  opacity: 0;
+}
+
+#title .studio:last-of-type {
+  margin-left: 3vmin;
+  font-weight: bold;
+  display: inline-block;
+}

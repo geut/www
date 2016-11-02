@@ -1,0 +1,10 @@
+# node
+node_modules/
+
+dest/
+
+.env
+
+logs
+
+npm-debug.log

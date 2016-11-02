@@ -1,0 +1,17 @@
+{
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "envify"
+    ]
+  },
+  "browser": {
+    "joi": "joi-browser",
+    "contact": "../../src/schemas/contact.js"
+  }
+}
