@@ -17,7 +17,6 @@ export default {
         validate: {
             payload: Joi.object().keys({
                 honeypot: Joi.any().valid(''),
-                _token: Joi.string().required(),
                 name: Joi.string().required(),
                 email: Joi.string().required().email(),
                 company: Joi.string().allow(''),
@@ -43,14 +42,22 @@ export default {
                         error,
                         ...request.payload
                     });
+                    reply({
+                        status: 'error',
+                        message: 'error sending the email'
+                    });
                 } else {
                     request.log('info', request.payload);
+                    reply({
+                        status: 'success'
+                    });
                 }
             });
+        } else {
+            reply({
+                status: 'error',
+                message: 'transporter error configuration'
+            });
         }
-
-        reply({
-            status: 'success'
-        });
     }
 };

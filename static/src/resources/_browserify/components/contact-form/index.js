@@ -6,28 +6,11 @@ const url = process.env.API;
 
 const schema = Joi.object().keys({
     honeypot: Joi.any().valid(''),
-    _token: Joi.string().required(),
     name: Joi.string().required(),
     email: Joi.string().required().email(),
     company: Joi.string().allow(''),
     comment: Joi.string().required()
 });
-
-const getToken = (form) => {
-    if (form.dataset.token) {
-        return Promise.resolve(form.dataset.token);
-    }
-
-    return fetch(`${url}/generate`, {
-        credentials: 'include',
-        method: 'GET'
-    })
-    .then(response => response.json())
-    .then((data) => {
-        form.dataset.token = data.crumb;
-        return data.crumb;
-    });
-};
 
 const validate = (data) => {
     return new Promise((resolve, reject) => {
@@ -47,13 +30,19 @@ function send(data) {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'X-CSRF-Token': values._token
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(values)
             })
         })
         .then(response => response.json());
+        .then((response) => {
+            if (response.status === 'success') {
+                return response;
+            } else {
+                throw new Error('error in request!');
+            }
+        })
 }
 
 function serialize(form) {
@@ -89,6 +78,7 @@ function showErrors(form, e) {
 
 export default function contactForm() {
     const contactForm = document.querySelector('.contact-form');
+    if (!contactForm) return;
     const form = contactForm.querySelector('form');
     const btnSend = form.querySelector('.send');
 
@@ -101,11 +91,7 @@ export default function contactForm() {
 
         const data = serialize(form);
 
-        getToken(form)
-            .then((token) => {
-                data._token = token;
-                return send(data);
-            })
+        send(data)
             .then(() => velocity(contactForm, 'fadeOut'))
             .then(() => {
                 contactForm.removeChild(form);

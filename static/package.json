@@ -10,7 +10,7 @@
     "build:site": "metalsmith",
     "build": "npm run build:site & npm run build:css & npm run build:js",
     "serve": "browser-sync start --server 'dest' --files 'dest/**/index.js' --files 'dest/**/index.css' --files 'dest/index.html' --reload-delay=300 --reload-debounce=500",
-    "build:production": "API=https://servicioexterno npm run build",
+    "build:production": "API=https://services-fbppszmkix.now.sh npm run build",
     "start": "API=http://localhost:3002 npm run build & npm run serve"
   },
   "devDependencies": {

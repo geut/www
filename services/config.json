@@ -22,23 +22,6 @@
   "registrations": [
   {
     "plugin": {
-      "register": "crumb",
-      "options": {
-        "restful": true,
-        "cookieOptions": {
-          "$filter": "env",
-          "$default": {
-            "isSecure": false
-          },
-          "production": {
-            "isSecure": true
-          }
-        }
-      }
-    }
-  },
-  {
-    "plugin": {
       "register": "good",
       "options": {
         "ops": false,

@@ -6,9 +6,9 @@ export default [
     },
     {
         method: 'GET',
-        path: '/generate',
+        path: '/',
         handler: function (request, reply) {
-            return reply({ crumb: request.server.plugins.crumb.generate(request, reply) });
+            return reply('nothing here!');
         }
     }
 ];

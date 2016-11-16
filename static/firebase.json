@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "dest",
+    "ignore": [
+      "firebase.json",
+      "src",
+      ".gitignore",
+      "metalsmith.json",
+      "package.json",
+      "yarn.lock",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
