@@ -13,16 +13,20 @@ layout: default.hbs
   {{> menu }}
 </section>
 
-<section id="{{ philosophy.name }}" class="{{ philosophy.name }}">
+<section id="{{ mission.name }}" class="{{ mission.name }}">
   <div class="container">
     <header>
-      <h2>{{ philosophy.subtitle }}</h2>
-      <h1>{{ philosophy.title }}</h1>
+      <h2>{{ mission.subtitle }}</h2>
+      <h1>{{ mission.title }}</h1>
     </header>
 
-    We are GEUT. A Software Development Shop with an opinionated stack and a particular style to do things.
-
-    #codewithopinions
+    <div class="grid-1-center">
+      {{#each mission.texts}}
+        <div class="col">
+          <span class="thought">{{{ this }}}</span>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </section>
 
@@ -57,15 +61,7 @@ layout: default.hbs
       <h1>Contact Us</h1>
     </header>
 
-    <div class="grid-2-center">
-      <div class="col-6_sm-12-middle contact-information text-left">
-        <div class="text contact-address">
-          <i class="fa fa-building-o" aria-hidden="true"></i> avenida siempre viva
-        </div>
-        <div class="text contact-email">
-          <i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:contact@geutstudio.com" title="Contact email">contact@geutstudio.com</a>
-        </div>
-      </div>
+    <div class="grid-1-center">
       <div class="col-6_sm-12-middle contact-form">
         <form class="grid-1" method="post">
           <div style="display: none;">

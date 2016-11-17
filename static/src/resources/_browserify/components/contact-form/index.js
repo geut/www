@@ -35,14 +35,14 @@ function send(data) {
                 body: JSON.stringify(values)
             })
         })
-        .then(response => response.json());
+        .then(response => response.json())
         .then((response) => {
             if (response.status === 'success') {
                 return response;
             } else {
                 throw new Error('error in request!');
             }
-        })
+        });
 }
 
 function serialize(form) {

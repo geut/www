@@ -12,7 +12,7 @@
   "plugins": {
     "metalsmith-metadata": {
       "about": "data/about.yaml",
-      "philosophy": "data/philosophy.yaml"
+      "mission": "data/mission.yaml"
     },
     "metalsmith-markdown": true,
     "metalsmith-layouts": {

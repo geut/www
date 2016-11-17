@@ -1,0 +1,35 @@
+section#mission h1, section#mission h2 {
+  color: white;
+}
+
+section#mission {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url(/resources/images/route.jpg);
+  background-position: 0 50%;
+  background-size: cover;
+}
+
+section#mission .thought {
+  color: white;
+  line-height: 1.9;
+  display: inline;
+  padding: 0.5rem;
+  border: 0px;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+}
+
+section#mission .thought .imp {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+  transform: skew(-6deg, 0deg);
+}
+
+@media screen and (width <= 768px) {
+  section#mission {
+    background-position: 50%;
+  }
+}

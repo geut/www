@@ -8,5 +8,6 @@
 /* -- sections -- */
 
 @import './sections/hero';
+@import './sections/mission';
 @import './sections/about';
 @import './sections/footer';
