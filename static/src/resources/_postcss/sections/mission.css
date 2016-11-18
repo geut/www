@@ -3,6 +3,7 @@ section#mission h1, section#mission h2 {
 }
 
 section#mission {
+  text-align: left;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
@@ -12,6 +13,7 @@ section#mission {
 }
 
 section#mission .thought {
+  font-weight: 100;
   color: white;
   line-height: 1.9;
   display: inline;
@@ -22,6 +24,7 @@ section#mission .thought {
 }
 
 section#mission .thought .imp {
+  font-weight: 300;
   background-color: rgba(0,0,0,0.5);
   color: white;
   padding: 0.4rem 0.4rem 0.4rem 0.4rem;
