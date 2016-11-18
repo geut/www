@@ -7,7 +7,9 @@
     "description": "Custom JS Software Development Team. Code with opinions.",
     "logo": "/resources/images/logo.jpg",
     "url": "https://geutstudio.com",
-    "favicon": "/resources/favicon.ico"
+    "favicon": "/resources/favicon.ico",
+    "github": "geut",
+    "twitter": "geutstudio"
   },
   "plugins": {
     "metalsmith-metadata": {
