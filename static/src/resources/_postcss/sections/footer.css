@@ -45,7 +45,7 @@ footer .notes .geut {
 
 footer a:link,
 footer a:visited { color: #fff; }
-footer a:hover   { color: var(--green); font-weight: bold; }
+footer a:hover   { color: var(--green); }
 footer a:active  {
   color: var(--green);
   font-weight: bold;
