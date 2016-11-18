@@ -12,8 +12,11 @@ team:
   - name: Diego Ignacio Paez
     twitter: carax
     github: dpaez
-    image: https://pbs.twimg.com/profile_images/754780261628477444/x3x7qd9B.jpg
-    text: 'Diego is a JS developer who believes the code you made can be trascendental to the world as we know it. He says: "the problem is a puzzle and the code is only a corner piece"'
+    image: https://pbs.twimg.com/profile_images/799493028348129280/FKiV5x49.jpg 
+    text: 'Diego is a JS developer who believes the code you made can make an impact into the world.
+    He likes to think about this: A diamond is very pretty but is very hard to add to a diamond. 
+    A ball of mud is not so pretty. But you can always add mud to a ball of mud.'
+
 
   - name: Maximiliano Fierro
     twitter: elmasse
