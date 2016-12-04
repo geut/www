@@ -7,14 +7,14 @@ team:
     twitter: tinchoz49
     github: tinchoz49
     image: https://pbs.twimg.com/profile_images/709043762530484224/UVrRVPGx.jpg
-    text: Martín is a faster JS developer with a passion for perfomance. He has always a refactor in mind. He loves read about functional programming in JS and thinks that all kind of streams are great.
+    text: Martín is a faster JS developer with a passion for perfomance. He has always a refactor in mind. He loves reading about functional programming in JS and thinks that all kind of streams are great.
 
   - name: Diego Ignacio Paez
     twitter: carax
     github: dpaez
-    image: https://pbs.twimg.com/profile_images/799493028348129280/FKiV5x49.jpg 
+    image: https://pbs.twimg.com/profile_images/799493028348129280/FKiV5x49.jpg
     text: 'Diego is a JS developer who believes the code you made can make an impact into the world.
-    He likes to think about this: A diamond is very pretty but is very hard to add to a diamond. 
+    He likes to think about this: A diamond is very pretty but is very hard to add to a diamond.
     A ball of mud is not so pretty. But you can always add mud to a ball of mud.'
 
 
