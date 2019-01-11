@@ -11,7 +11,7 @@
     "micro-dev": "^3.0.0"
   },
   "scripts": {
-    "dev": "micro-dev index.js"
+    "dev": "micro-dev index.js"    
   },
   "license": "ISC"
 }
