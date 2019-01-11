@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import yup from 'yup'
+import * as yup from 'yup'
 
 import Section from './section'
 
 export default class Contact extends Component {
   schema = yup.object().shape({
     name: yup.string().required(),
-    email: yup.email().required(),
+    email: yup.string().email().required(),
     company: yup.string(),
     comment: yup.string().required()
   })
@@ -25,7 +25,7 @@ export default class Contact extends Component {
     })
   }
 
-  onSubmit = () => {    
+  onSubmit = async () => {    
     try {
       const value = await this.schema.validate(this.state)
       const response = await fetch('/api/contact', {
