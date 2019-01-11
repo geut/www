@@ -1,38 +1,12 @@
 {
   "name": "www",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "version": "2.0.0",
+  "description": "GEUT Site",
+  "private": true,
+  "author": "contact@geutstudio.com",
   "license": "ISC",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:services": "cd services && npm run watch",
-    "watch:static": "cd static && npm run start",
-    "start": "npm-run-all --race --parallel watch:*"
-  },
-  "devDependencies": {
-    "eslint": "^3.9.1",
-    "eslint-config-postcss": "^2.0.2",
-    "npm-run-all": "^3.1.1"
-  },
-  "eslintConfig": {
-    "extends": "postcss",
-    "rules": {
-      "max-len": 0,
-      "no-shadow": 0
-    },
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "experimentalObjectRestSpread": true
-      }
-    }
+  "scripts": {},
+  "dependencies": {
+    "lerna": "^3.10.2"
   }
 }

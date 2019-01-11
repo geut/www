@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "geut-www",
+  "builds": [
+    {
+      "src": "packages/contact/index.js",
+      "use": "@now/node"
+    },
+    { 
+      "src": "packages/site/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "packages/site/out" }
+    }
+  ],
+  "routes": [
+    { "src": "/api/contact", "methods": ["POST"], "dest":"packages/contact/index.js" },
+    { "src": "/(.*)", "dest": "packages/site/out/$1"}
+  ]
+}
