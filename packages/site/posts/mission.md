@@ -1,4 +1,5 @@
 ---
+page: false
 title: Our Mission
 subtitle: Code with Opinions
 category: front
