@@ -9,11 +9,11 @@
     { 
       "src": "packages/site/package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "packages/site/out" }
+      "config": { "distDir": "out" }
     }
   ],
   "routes": [
     { "src": "/api/contact", "methods": ["POST"], "dest":"packages/contact/index.js" },
-    { "src": "/(.*)", "dest": "packages/site/out/$1"}
+    { "src": "/(.*)", "dest": "packages/site/$1"}
   ]
 }
