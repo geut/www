@@ -4,8 +4,10 @@ import Header from './header'
 
 export * from './paragraph'
 
+const dash = title => title.toLowerCase().replace(' ', '-')
+
 export default ({ title, subtitle, className, children}) => (
-  <section className={className}>
+  <section id={dash(title)} className={className}>
     <div className="container">
       <Header title={title} subtitle={subtitle} />
       { children }
@@ -19,7 +21,6 @@ export default ({ title, subtitle, className, children}) => (
         text-align: center;
         display: flex;
         flex-direction: column;
-
       }
 
       .container {
