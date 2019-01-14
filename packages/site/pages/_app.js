@@ -1,7 +1,11 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import Router from 'next/router'
+import withGA from 'next-ga'
 
-export default class MyApp extends App {
+import { UA } from '../site'
+
+class SiteApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {}
 
@@ -118,3 +122,5 @@ export default class MyApp extends App {
     )
   }
 }
+
+export default withGA(UA, Router)(SiteApp)

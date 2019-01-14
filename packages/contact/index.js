@@ -22,7 +22,7 @@ const transporter = process.env.MAIL_HOST ? nodemailer.createTransport({
 
 module.exports = async (request, response) => {
   const value = await json(request)
-    const data =  await schema.validate(value)
+  const data =  await schema.validate(value)
 
   await transporter.sendMail({
     from: `Geut Studio Website <${process.env.MAIL_USER}>`,

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "next": "^7.0.2",
+    "next-ga": "^2.3.4",
     "nextein": "^2.1.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
