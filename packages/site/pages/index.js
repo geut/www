@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { withPostsFilterBy, inCategory } from 'nextein/posts'
 import { Content } from 'nextein/post'
 
-import { name } from '../site'
+import { name, description, url } from '../site'
 import Hero from '../components/hero'
 import Section, { Paragraph } from '../components/section'
 import About from '../components/about'
@@ -19,7 +19,13 @@ class Index extends Component {
     const members = posts.filter(inCategory('team'))
     return (
       <main role="main">
-        <Head><title>{name}</title></Head>
+        <Head>
+          <title>{name}</title>
+          <meta name="description" content={description} />
+          <meta property="og:title" content={name} />
+          <meta property="og:description" content={description} />
+          <meta property="og:image" content={`${url}/static/images/logo.png`} />
+        </Head>
         <Hero />
         {sections.map(post => (
           <Section key={post.data.name} {...post.data} className={post.data.section}>
