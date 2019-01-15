@@ -12,20 +12,22 @@ export default class Contact extends Component {
   })
 
   state = {
-    honeypot: '',
     name: '',
     email: '',
     company: '',
-    comment: ''
+    comment: '',
+    sent: false,
+    error: undefined
   }
 
   onChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+      error: undefined
     })
   }
 
-  onSubmit = async () => {    
+  onSubmit = async () => {
     try {
       const value = await this.schema.validate(this.state)
       const response = await fetch('/api/contact', {
@@ -50,30 +52,30 @@ export default class Contact extends Component {
   }
 
   render() {
-    const { honeypot, name, email, company, comment, sent } = this.state
+    const { name, email, company, comment, sent, error } = this.state
     return (
       <Section title="Contact US" subtitle="Get in touch">
         <div className="grid-1-center container">
           <div className="col-6_sm-12-middle contact-form">
             {!sent &&
               <form className="grid-1">
-                <div style={{display: "none"}}>
-                  <input type="text" id="honeypot" name="honeypot" value={honeypot}/>
+                <div className={`col field ${error && error.path==="name" ? "error" : ""}`}>
+                  <input type="text" name="name" placeholder="name*" value={name} onChange={this.onChange}/>
+                  {error && error.path==="name" && <span className="error-message">{error.message}</span>}
+                </div>
+                <div className={`col field ${error && error.path==="email" ? "error" : ""}`}>
+                  <input type="text" name="email" placeholder="email*" value={email} onChange={this.onChange}/>
+                  {error && error.path==="email" && <span className="error-message">{error.message}</span>}
                 </div>
                 <div className="col field">
-                  <input type="text" id="name" name="name" placeholder="name*" value={name} onChange={this.onChange}/>
+                  <input type="text" name="company" placeholder="company" value={company} onChange={this.onChange}/>
                 </div>
-                <div className="col field">
-                  <input type="text" id="email" name="email" placeholder="email*" value={email} onChange={this.onChange}/>
-                </div>
-                <div className="col field">
-                  <input type="text" id="company" name="company" placeholder="company" value={company} onChange={this.onChange}/>
-                </div>
-                <div className="col field">
-                  <textarea id="comment" name="comment" placeholder="comment*" rows="4" value={comment} onChange={this.onChange}></textarea>
+                <div className={`col field ${error && error.path==="comment" ? "error" : ""}`}>
+                  <textarea name="comment" placeholder="comment*" rows="4" value={comment} onChange={this.onChange}></textarea>
+                  {error && error.path==="comment" && <span className="error-message">{error.message}</span>}
                 </div>
                 <div className="col">
-                  <button type="button" className="send btn btn--m btn--black">
+                  <button type="button" className="send btn btn--m btn--black" onClick={this.onSubmit}>
                     Send my <b>question</b>
                   </button>
                 </div>
@@ -81,7 +83,7 @@ export default class Contact extends Component {
             }
             {sent &&
               <div>
-                <h1>Thank you for contacting us <i class="fa fa-envelope" aria-hidden="true"></i></h1>
+                <h1>Thank you for contacting us <i className="fa fa-envelope" aria-hidden="true"></i></h1>
                 <h2>We'll be in touch as soon as possible.</h2>
               </div>
             }
@@ -114,13 +116,13 @@ export default class Contact extends Component {
           }
 
           .field.error input, .field.error textarea {
-            border: solid 1px color( var(--red) l(80%) );
-            border-bottom: solid 2px color( var(--red) l(75%) );
+            border: solid 1px var(--red);
+            border-bottom: solid 2px var(--red);
           }
 
-          .field.error .error-message {
+          .error-message {
             font-size: 0.8em;
-            color: color( var(--red) l(50%) );
+            color: var(--red);
             margin: 5px;
             display: block;
           }
