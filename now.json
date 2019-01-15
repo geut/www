@@ -15,5 +15,10 @@
   "routes": [
     { "src": "/api/contact", "methods": ["POST"], "dest":"packages/contact/index.js" },
     { "src": "/(.*)", "dest": "packages/site/$1"}
-  ]
+  ],
+  "env": {
+    "MAIL_TO": "contact@geutstudio.com",
+    "MAIL_USER": "@zoho-user",
+    "MAIL_PASSWORD": "@zoho-password"
+  }
 }
