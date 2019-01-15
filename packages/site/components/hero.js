@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Spring } from 'react-spring'
 
 import Logo from './logo'
 import Navigation from './navigation'

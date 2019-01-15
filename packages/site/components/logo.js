@@ -1,60 +1,58 @@
 import React, { Component } from 'react'
-// import velocity from 'velocity-animate'
-let velocity;
 
 export default class Logo extends Component {
   static defaultProps = {
     animate: false
   }
 
-  draw = async (element) => {
-    element.setAttribute('stroke-dasharray', element.getTotalLength())
-    element.setAttribute('stroke-dashoffset', element.getTotalLength())
+  // draw = async (element) => {
+  //   element.setAttribute('stroke-dasharray', element.getTotalLength())
+  //   element.setAttribute('stroke-dashoffset', element.getTotalLength())
 
-    if ( !element.dataset ) {
-        // weird FF,old browsers fix
-        element.dataset = {};
-        element.dataset.start = element.attributes.getNamedItem( 'data-start' ).value
-        element.dataset.duration = element.attributes.getNamedItem( 'data-duration' ).value
-    }
+  //   if ( !element.dataset ) {
+  //       // weird FF,old browsers fix
+  //       element.dataset = {};
+  //       element.dataset.start = element.attributes.getNamedItem( 'data-start' ).value
+  //       element.dataset.duration = element.attributes.getNamedItem( 'data-duration' ).value
+  //   }
 
-    const delay = parseInt(element.dataset.start)
-    const duration = parseInt(element.dataset.duration)
+  //   const delay = parseInt(element.dataset.start)
+  //   const duration = parseInt(element.dataset.duration)
   
-    return velocity(element, {
-        strokeDashoffset: 0
-    }, {
-        easing: 'easeInOutQuad',
-        delay,
-        duration
-    })
-  }
+  //   return velocity(element, {
+  //       strokeDashoffset: 0
+  //   }, {
+  //       easing: 'easeInOutQuad',
+  //       delay,
+  //       duration
+  //   })
+  // }
 
-  fill = async (element) => {
-    const fill = element.getAttribute('fill')
-    const stroke = element.getAttribute('stroke')
-    return velocity(element, {
-        fillOpacity: 1,
-        fill,
-        stroke
-    })
-  }
+  // fill = async (element) => {
+  //   const fill = element.getAttribute('fill')
+  //   const stroke = element.getAttribute('stroke')
+  //   return velocity(element, {
+  //       fillOpacity: 1,
+  //       fill,
+  //       stroke
+  //   })
+  // }
 
-  async componentDidMount() {
-    const { animate } = this.props
-    if (animate && typeof window !== undefined) {
-      velocity = require('velocity-animate')
+  // async componentDidMount() {
+  //   const { animate } = this.props
+  //   if (animate && typeof window !== undefined) {
+  //     velocity = require('velocity-animate')
       
-      this.logoEl.style.opacity = 1;
+  //     this.logoEl.style.opacity = 1;
 
-      const paths = Array.from(this.logoEl.getElementsByTagName('path'))
-      await Promise.all(paths.map(this.draw))
-      await Promise.all(paths.map(this.fill))
-    }
-  }
+  //     const paths = Array.from(this.logoEl.getElementsByTagName('path'))
+  //     await Promise.all(paths.map(this.draw))
+  //     await Promise.all(paths.map(this.fill))
+  //   }
+  // }
 
   render() {
-    const { animate, ...props } = this.props
+    const { animate,  ...props } = this.props
     return (
       <svg ref={el => this.logoEl = el} {...props} type="image/svg+xml" x="0px" y="0px" viewBox="0 0 220 160" xmlSpace="preserve">
         <g>
@@ -132,9 +130,6 @@ export default class Logo extends Component {
           </g>
         </g>
         <image href="" src="./static/images/logo.png" alt="GEUT logo" className="logo-fallback"></image>
-        <style jsx>{`
-          svg {opacity: ${animate ? 0: 1};}
-        `}</style>
       </svg>
     )
   }
