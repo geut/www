@@ -32,9 +32,9 @@ export default ({ members }) => {
                     </li>
                   </ul>
                 </header>
-                <p>
+                <div className="team-member">
                   <Content {...member} />
-                </p>                
+                </div>
               </section>
             </div>
           )
@@ -46,7 +46,7 @@ export default ({ members }) => {
         border-top: 8px solid;
         border-top-color: var(--blue);
       }
-      section > p {
+      .team-member {
         padding: 1em;
         font-size: 1em;
         color: #666;
@@ -58,7 +58,7 @@ export default ({ members }) => {
       }
 
       h1 {
-        font-size: 1.2em;        
+        font-size: 1.2em;
         margin: 0;
         margin-bottom: .5em;
         text-transform: uppercase;
