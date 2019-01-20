@@ -14,7 +14,7 @@
   ],
   "routes": [
     { "src": "/api/contact", "methods": ["POST"], "dest":"packages/contact/index.js" },
-    { "src": "/(.*)", "dest": "packages/site/$1"}
+    { "src": "/(.*)", "dest": "packages/site/$1" }
   ],
   "env": {
     "MAIL_TO": "contact@geutstudio.com",
