@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default () => (
-  <nav role="navigation">
+export default React.forwardRef((props, ref) => (
+  <nav role="navigation" {...props} ref={ref}>
     <ul>
       <li><a href="#our-mission">Mission</a></li>
       <li><a href="#about-us">About Us</a></li>
@@ -20,4 +20,4 @@ export default () => (
       }    
     `}</style>
   </nav>
-)
+))
