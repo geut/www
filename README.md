@@ -1,6 +1,6 @@
 # www
 
-Experimental `www` with the unique _GEUT_ style!
+The official GEUT site. Built with [Nextein](https://nextein.now.sh/)
 
 # Install & Bootstrap
 
