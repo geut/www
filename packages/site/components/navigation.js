@@ -28,8 +28,8 @@ const scrollAnimated = (event) => {
   }
 }
 
-export default React.forwardRef((props, ref) => (
-  <nav role="navigation" {...props} ref={ref}>
+export default props => (
+  <nav role="navigation" {...props}>
     <ul>
       <li><a href="#our-mission" onClick={scrollAnimated}>Mission</a></li>
       <li><a href="#about-us" onClick={scrollAnimated}>About Us</a></li>
@@ -38,7 +38,7 @@ export default React.forwardRef((props, ref) => (
     <style jsx>{`
       nav li {
         font-size: 4vmin;
-        margin: 1vw;
+        margin: 1vw 1.8vw;
       }
 
       nav li a{
@@ -48,4 +48,4 @@ export default React.forwardRef((props, ref) => (
       }    
     `}</style>
   </nav>
-))
+)

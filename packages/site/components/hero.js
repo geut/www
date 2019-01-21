@@ -7,12 +7,16 @@ import Navigation from './navigation'
 import { name } from '../site'
 
 export default class Hero extends Component {
-  logo = React.createRef()
   header = React.createRef()
-  nav = React.createRef()
 
   componentDidMount() {
-    this.logo.querySelectorAll('path')
+    const header = this.header.current
+
+    const logo = header.querySelector('.logo')
+    const title = header.querySelector('.title')
+    const nav = header.querySelector('.nav')
+
+    logo.querySelectorAll('path')
       .forEach(e => {
         e.style.fillOpacity = 0
         e.style.opacity = 0
@@ -22,25 +26,23 @@ export default class Hero extends Component {
       easing: 'easeInOutQuad'
     })
     .add({
-      targets: this.logo,
+      targets: logo,
       opacity: 1,
       delay: 0
     })
     .add({
-      targets: this.logo.querySelectorAll('path.main'),
+      targets: logo.querySelectorAll('path.main'),
       opacity: 1,
       strokeDashoffset: [anime.setDashoffset, 0],
       delay: anime.stagger(300),
-      // delay: (el) => { return el.getAttribute('data-start') },
-      // duration: (el) => { return el.getAttribute('data-duration') }
     })
     .add({
-      targets: this.logo.querySelectorAll('path'),
+      targets: logo.querySelectorAll('path'),
       opacity: 1,
       fillOpacity: [0, 1],
     })
     .add({
-      targets: [this.header, this.nav],
+      targets: [title, nav],
       opacity: 1,
       delay: anime.stagger(100),
     })
@@ -49,10 +51,10 @@ export default class Hero extends Component {
   render() {
     return (
       <section>
-        <header>
-          <Logo width="70vmin" ref={e => this.logo = e} opacity={0}/>
-          <h1 ref={e => this.header = e}>{name}</h1>
-          <Navigation className="nav" ref={e => this.nav = e} style={{ opacity: 0 }}/>
+        <header ref={this.header}>
+          <Logo className="logo" width="70vmin" opacity={0}/>
+          <h1 className="title">{name}</h1>
+          <Navigation className="nav" style={{ opacity: 0 }}/>
         </header>
         <style jsx>{`
           section {
