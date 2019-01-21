@@ -1,8 +1,0 @@
-# node
-node_modules/
-
-dest/
-
-.env
-
-npm-debug.log

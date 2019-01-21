@@ -1,11 +1,24 @@
 # www
 
-Experimental `www` with the unique _GEUT_ style!
+The official GEUT site. Built with [Nextein](https://nextein.now.sh/)
 
-## Install & Run
+# Install & Bootstrap
 
 ```
-yarn install && yarn start
-open http://localhost:3000/
+npm install && npm run bootstrap
+```
 
+# Development
+
+## Site
+
+```
+cd packages/site
+npm run dev
+```
+
+# Deploy
+
+```
+now
 ```

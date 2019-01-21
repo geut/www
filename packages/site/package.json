@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "animejs": "^3.0.1",
+    "next": "^7.0.2",
+    "next-ga": "^2.3.4",
+    "nextein": "^2.1.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "yup": "^0.26.7"
+  },
+  "scripts": {
+    "dev": "nextein",
+    "export": "nextein build && nextein export",
+    "now-build": "npm run export"
+  },
+  "author": "",
+  "license": "ISC"
+}
