@@ -46,4 +46,4 @@ class Index extends Component {
   }
 }
 
-export default withPostsFilterBy(post => ( inCategory('front')(post) || inCategory('team') ))(Index)
+export default withPostsFilterBy(post => ( inCategory('front')(post) || inCategory('team')(post) ))(Index)
