@@ -5,7 +5,9 @@
   "private": true,
   "author": "contact@geutstudio.com",
   "license": "ISC",
-  "scripts": {},
+  "scripts": {
+    "bootstrap": "lerna bootstrap"
+  },
   "dependencies": {
     "lerna": "^3.10.2"
   }
