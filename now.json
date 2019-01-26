@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "geut-www",
+  "alias": "geutstudio.com",
   "builds": [
     {
       "src": "packages/contact/index.js",
