@@ -59,22 +59,22 @@ export default class Contact extends Component {
           <div className="col-6_sm-12-middle contact-form">
             {!sent &&
               <form className="grid-1">
-                <div className={`col field ${error && error.path==="name" ? "error" : ""}`}>
+                <div className={`col-12_sm-12-middle field ${error && error.path==="name" ? "error" : ""}`}>
                   <input type="text" name="name" placeholder="name*" value={name} onChange={this.onChange}/>
                   {error && error.path==="name" && <span className="error-message">{error.message}</span>}
                 </div>
-                <div className={`col field ${error && error.path==="email" ? "error" : ""}`}>
+                <div className={`col-12_sm-12-middle field ${error && error.path==="email" ? "error" : ""}`}>
                   <input type="text" name="email" placeholder="email*" value={email} onChange={this.onChange}/>
                   {error && error.path==="email" && <span className="error-message">{error.message}</span>}
                 </div>
-                <div className="col field">
+                <div className="col-12_sm-12-middle field">
                   <input type="text" name="company" placeholder="company" value={company} onChange={this.onChange}/>
                 </div>
-                <div className={`col field ${error && error.path==="comment" ? "error" : ""}`}>
+                <div className={`col-12_sm-12-middle field ${error && error.path==="comment" ? "error" : ""}`}>
                   <textarea name="comment" placeholder="comment*" rows="4" value={comment} onChange={this.onChange}></textarea>
                   {error && error.path==="comment" && <span className="error-message">{error.message}</span>}
                 </div>
-                <div className="col">
+                <div className="col-12_sm-12-middle">
                   <button type="button" className="send btn btn--m btn--black" onClick={this.onSubmit}>
                     Send my <b>question</b>
                   </button>
@@ -91,16 +91,18 @@ export default class Contact extends Component {
         </div>
         <style jsx>{`
           .container {
-            flex: 1
+            flex: 1;
+          }
+          .field {
+            display: flex;
+            flex-direction: row;            
           }
           .field input:-webkit-autofill {
             box-shadow: 0 0 0 1000px var(--grey) inset !important;
           }
-
-          .field input[type="text"], .field textarea {
-            display: block;
-            margin: 0;
-            width: 100%;
+          .field input[type="text"],
+          .field textarea {
+            flex: 1;
             font-size: 18px;
             appearance: none;
             box-shadow: none;
