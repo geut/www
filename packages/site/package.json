@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "animejs": "^3.0.1",
-    "next": "^7.0.2",
+    "next": "^8.0.3",
     "next-ga": "^2.3.4",
-    "nextein": "^2.1.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "nextein": "^2.2.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "yup": "^0.26.7"
   },
   "scripts": {
