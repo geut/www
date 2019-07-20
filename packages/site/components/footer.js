@@ -1,5 +1,8 @@
 import React from 'react'
 import Logo from './logo'
+import GitHub from './icons/github'
+import Twitter from './icons/twitter'
+
 import { legal, mail, github, twitter } from '../site'
 
 export default () => (
@@ -11,15 +14,15 @@ export default () => (
           <Logo width="80px"/>
         </div>
         <nav className="col-4_md-5_sm-12 text-center">
-          <ul>
+          <ul className="contact">
             <li>
               <a href={`https://github.com/${github}`} title={`GitHub account ${github}`} target="_blank" rel="nofollow">
-                <i className="fa fa-github" aria-hidden="true"></i>
+                <GitHub width={16} />
               </a>
             </li>
             <li>
               <a href={`https://twitter.com/${twitter}`} title={`Twitter account ${twitter}`} target="_blank" rel="nofollow">
-                <i className="fa fa-twitter" aria-hidden="true"></i>
+                <Twitter width={16} />
               </a>
             </li>
             <li>
@@ -34,7 +37,6 @@ export default () => (
         background: var(--violetDark);
         padding-top: 2rem;
         padding-bottom: 1rem;
-        margin-top: 10px;
         color: #fff;
       }
 
@@ -63,6 +65,11 @@ export default () => (
         margin: 0px;
       }
 
+      footer .contact li :global(svg) {
+        fill: white;
+        vertical-align: middle;
+      }
+
       footer .notes {
         text-transform: uppercase;
       }
@@ -86,6 +93,9 @@ export default () => (
         font-size: 14px;
       }
     
+      .text-center {
+        text-align: center;
+      }
     `}</style>
   </footer>
 )

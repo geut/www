@@ -8,8 +8,8 @@ export default props => (
       header {
         text-align: left;
         text-transform: uppercase;
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding-top: calc(var(--spacing) * 4);
+        padding-bottom: calc(var(--spacing) * 4);
         color: var(--primary-color);
       }
 
@@ -20,7 +20,7 @@ export default props => (
       }
 
       h2 {
-        font-weight: 200;
+        font-weight: 300;
         font-size: 1em;
         margin: 0;
         padding: 0;

@@ -24,7 +24,7 @@ export default ({ title, subtitle, className, children}) => (
       }
 
       .container {
-        width: 80vw;
+        width: 70vw;
         min-height: 100%;
         margin: 0 auto;
         flex: 1;
@@ -49,7 +49,7 @@ export default ({ title, subtitle, className, children}) => (
         background-position: 0 50%;
         background-size: cover;
       }
-      
+
       @media screen and (width <= 768px) {
         section {
           height: auto;
@@ -58,7 +58,7 @@ export default ({ title, subtitle, className, children}) => (
         section.mission {
           background-position: 50%;
         }
-      }      
+      }
     `}</style>
   </section>
 )

@@ -9,6 +9,6 @@
     "bootstrap": "lerna bootstrap"
   },
   "dependencies": {
-    "lerna": "^3.10.2"
+    "lerna": "^3.13.3"
   }
 }

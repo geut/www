@@ -1,10 +1,7 @@
 ---
 page: false
 title: Diego Paez
-twitter: carax
-github: dpaez
 role: JS Developer
-avatar: https://pbs.twimg.com/profile_images/1015035465655836672/x0QpBkc4_400x400.jpg
 founder: true
 ---
 
