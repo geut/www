@@ -18,7 +18,7 @@ export default class Contact extends Component {
     company: '',
     comment: '',
     sent: false,
-    error: true
+    error: undefined
   }
 
   onChange = (e) => {
