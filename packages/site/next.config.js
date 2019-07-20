@@ -12,5 +12,8 @@ module.exports = withNextein(withCSS({
         }
       }
     ]
-  }
+  },
+  exportPathMap: () => ({
+    '/blog': { page: '/blog' }
+  })
 }))
