@@ -1,10 +1,7 @@
 ---
 page: false
 title: Max Fierro
-twitter: elmasse
-github: elmasse
 role: JS Developer
-avatar: https://pbs.twimg.com/profile_images/834441249247653889/CZU5hL32.jpg
 founder: true
 ---
 

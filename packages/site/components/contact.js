@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import * as yup from 'yup'
 
 import Section from './section'
+import { Button } from './elements'
 
 export default class Contact extends Component {
   schema = yup.object().shape({
@@ -29,7 +30,7 @@ export default class Contact extends Component {
 
   onSubmit = async () => {
     try {
-      const value = await this.schema.validate(this.state)
+      const value = await this.schema.validate(this.state)      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -74,10 +75,10 @@ export default class Contact extends Component {
                   <textarea name="comment" placeholder="comment*" rows="4" value={comment} onChange={this.onChange}></textarea>
                   {error && error.path==="comment" && <span className="error-message">{error.message}</span>}
                 </div>
-                <div className="col-12_sm-12-middle">
-                  <button type="button" className="send btn btn--m btn--black" onClick={this.onSubmit}>
-                    Send my <b>question</b>
-                  </button>
+                <div className="col-12_sm-12-middle button">
+                  <Button type="button" variant="highlight" onClick={this.onSubmit}>
+                    <span>Send my <b>question</b></span>
+                  </Button>
                 </div>
               </form>
             }
@@ -95,7 +96,7 @@ export default class Contact extends Component {
           }
           .field {
             display: flex;
-            flex-direction: row;            
+            flex-direction: column;            
           }
           .field input:-webkit-autofill {
             box-shadow: 0 0 0 1000px var(--grey) inset !important;
@@ -120,6 +121,14 @@ export default class Contact extends Component {
           .field.error input, .field.error textarea {
             border: solid 1px var(--red);
             border-bottom: solid 2px var(--red);
+          }
+
+          .button {
+            display: flex;
+          }
+
+          .button :global(button) {
+            flex: 1;
           }
 
           .error-message {

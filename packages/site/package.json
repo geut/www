@@ -3,12 +3,18 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
+    "@mapbox/rehype-prism": "^0.3.1",
+    "@zeit/next-css": "^1.0.1",
     "animejs": "^3.0.1",
-    "next": "^8.0.3",
+    "date-fns": "^1.30.1",
+    "lodash.flowright": "3.5.0",
+    "next": "^9.0.0",
     "next-ga": "^2.3.4",
-    "nextein": "^2.2.0",
+    "nextein": "^2.3.0",
+    "prismjs": "^1.16.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "remark-emoji": "^2.0.2",
     "yup": "^0.26.7"
   },
   "scripts": {
