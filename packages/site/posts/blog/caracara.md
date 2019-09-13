@@ -2,10 +2,11 @@
 title: "Caracara: React + Dat + Automerge"
 subtitle: Or how to create a simple collaborative editor on the distributed web
 author: diego
-tags: 
+tags:
   - dat
   - p2p
   - react
+date: 2019-07-29
 ---
 
 Trying to combine, [again](https://github.com/geut/olaf), Dat with some

@@ -7,6 +7,7 @@ tags:
   - recap
   - company
   - announcements
+date: 2019-09-13
 ---
 
 Our first year is done. We've always believed in our capacity as a team. But, our real strength is actually shown when put down to practice. The result, which is still a work in progress, is being shaped and we are proud of it. Maneuvering between different team setups organization (either 50/50 internal and consultancy work or full time consultancy when needed) was clearly an effective way which led to fruitful insights. We are more mature now and we have a renewed goal of our initial basis: to work more in our own products and hence give more rope to the GEUT way of building.

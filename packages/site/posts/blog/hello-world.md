@@ -2,9 +2,10 @@
 page: post
 title: Hello, World!
 subtitle: Code with Opinions
-tags: 
+tags:
   - announcements
 author: max
+date: 2019-07-28
 ---
 
 Hello! This is our first post. We are going to share here experiences, announcements and sometimes some technical notes and opinions.
