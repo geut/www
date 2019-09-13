@@ -27,7 +27,7 @@ A few months later, a new opportunity appears, one that involves a new business 
 Coming back to this new opportunity. As it grew, it demanded more of us and so we re-arranged "our forces" accordingly.
 
 In the middle of that, we made two apparent unrelated things. One was to formalize some of our ideas around some initial play with Dat and the P2P scene on web apps. This became the [dat-workshop](https://geut.github.io/dat-workshop/#/). We presented it at NodeConf Argentina 2018 to an audience of ~25 people, that ended up creating this P2P chat called [olaf chat](https://olafchat.netlify.com/). This first experience was memorable.
-Another thing we did was to kickstart the Dat comm-comm working group. This has the main goal of incrementing the conversation about Dat, its ecosystem, the authors and the users. This was December 2018 when we had the first meeting between two users and now hosts of each comm-comm meeting, Martin Heidegger and Diego. Currently we have more than 27 meetings and counting.
+Another thing we did was to kickstart the [Dat comm-comm working group](https://github.com/dat-land/comm-comm). This has the main goal of incrementing the conversation about Dat, its ecosystem, the authors and the users. This was December 2018 when we had the first meeting between two users and now hosts of each comm-comm meeting, Martin Heidegger and Diego. Currently we have more than 27 meetings and counting.
 
 <img src="/static/images/dat_workshop.jpg" alt="GEUT team members, Martin and Diego giving the 1st edition of the Dat Workshop at NodeConf Argentina 2018." style="width: 100%;">
 
