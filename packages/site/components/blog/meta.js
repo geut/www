@@ -29,6 +29,12 @@ export default class Meta extends Component {
             margin: var(--spacing) 0;
             color: var(--grey500);
           }
+
+          @media screen and (max-width: 680px) {
+            .inline {
+              display: block;
+            }
+          }
         `}</style>
       </React.Fragment>
     )
