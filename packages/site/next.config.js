@@ -10,6 +10,12 @@ module.exports = withNextein(withCSS({
           remark: ['remark-emoji'],
           rehype: ['@mapbox/rehype-prism']
         }
+      },
+      {
+        name: '@geut/nextein-plugin-title-chicago-style',
+        options: {
+          special: ['GEUT']
+        }
       }
     ]
   },
