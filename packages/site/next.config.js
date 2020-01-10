@@ -5,7 +5,7 @@ module.exports = withNextein(withCSS({
   nextein: {
     plugins: [
       {
-        name: 'nextein-plugin-markdown', 
+        name: 'nextein-plugin-markdown',
         options: {
           remark: ['remark-emoji'],
           rehype: ['@mapbox/rehype-prism']
@@ -14,7 +14,7 @@ module.exports = withNextein(withCSS({
       {
         name: '@geut/nextein-plugin-title-chicago-style',
         options: {
-          special: ['GEUT']
+          special: ['GEUT', 'SDK', 'p2pcommons']
         }
       }
     ]
