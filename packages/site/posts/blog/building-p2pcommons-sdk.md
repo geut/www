@@ -89,6 +89,5 @@ Thanks for reading!
 ___
 _Many thanks to editors and proofreaders :clap: :_
 - Chris Hartgerink
-- Martin Acosta
-
+- [Martin Acosta](https://twitter.com/tinchoz49)
 
