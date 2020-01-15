@@ -57,7 +57,7 @@ class Post extends Component {
           header {
             margin-top: calc(var(--spacing) * 8);
             overflow: hidden;
-            display: flex;            
+            display: flex;
             justify-content: center;
             flex-direction: column;
           }
@@ -78,7 +78,7 @@ class Post extends Component {
             padding: 0.5rem;
             border: 0px;
           }
-          
+
           .post {
             max-width: 780px;
             margin: calc(var(--spacing) * 4) auto;
@@ -87,7 +87,8 @@ class Post extends Component {
 
           @media screen and (max-width: 680px) {
             header h1 {
-              font-size: 3.5em;
+              font-size: 3em;
+              font-size: 10vw;
             }
           }
         `}</style>
