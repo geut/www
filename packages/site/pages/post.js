@@ -89,6 +89,7 @@ class Post extends Component {
             header h1 {
               font-size: 3em;
               font-size: 10vw;
+              hyphens: auto;
             }
           }
         `}</style>
