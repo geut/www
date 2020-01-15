@@ -13,5 +13,6 @@
   "scripts": {
     "dev": "micro-dev index.js -p 3001"
   },
+  "engines": { "node": "12.x" },
   "license": "ISC"
 }

@@ -10,5 +10,6 @@
   },
   "dependencies": {
     "lerna": "^3.13.3"
-  }
+  },
+  "engines": { "node": "12.x" }
 }
