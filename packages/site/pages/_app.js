@@ -1,5 +1,5 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Router from 'next/router'
 import withGA from 'next-ga'
 
@@ -13,7 +13,7 @@ class SiteApp extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <Container>
+      <>
         <Meta />
         <style jsx global>{`
             :root {
@@ -77,10 +77,10 @@ class SiteApp extends App {
             a {
               text-decoration: none;
             }
-          
+
           `}</style>
         <Component {...pageProps} />
-      </Container>
+      </>
     )
   }
 }

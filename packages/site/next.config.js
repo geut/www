@@ -1,11 +1,11 @@
 const { withNextein } = require('nextein/config')
-const withCSS = require('@zeit/next-css')
 
-module.exports = withNextein(withCSS({
+module.exports = withNextein({
   nextein: {
     plugins: [
       {
         name: 'nextein-plugin-markdown',
+        raw: false,
         options: {
           remark: ['remark-emoji'],
           rehype: ['@mapbox/rehype-prism']
@@ -22,4 +22,4 @@ module.exports = withNextein(withCSS({
   exportPathMap: () => ({
     '/blog': { page: '/blog' }
   })
-}))
+})
