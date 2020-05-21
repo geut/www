@@ -26,7 +26,7 @@ Having a separate organization, detached from personal accounts, with clear face
 
 ## The new Dat Community Ecosystem
 
-There is another interesting but _subtle_ aspect that comes with the new Hyper organization and this rebranding,`hyper`, just becomes another actor, another place in this decentralized puzzle.
+There is another interesting but _subtle_ aspect that comes with the new Hyper organization and this rebranding, `hyper`, just becomes another actor, another place in this decentralized puzzle.
 With the rebranding, the need for a new _umbrella term_ becomes clearer and will give us a new perspective of the ecosystem. Along the last years, many projects have grown using some of the basic mechanisms introduced by the foundational blocks, more specifically, `Hypercore`. This foundational (self-declared) structure has given a lot of flexibility to many projects, like [Cabal](https://cabal.chat/), [Ara](https://ara.one/), [Mapeo](https://www.digital-democracy.org/mapeo/), just to name a few. Whilst these projects maintain a concrete relationship with some Hyper modules, they have made their own little ecosystem too.
 Naming things help us identify and also describe the world surrounding us. With the rebranding and the new Hypercore Protocol org scope, the necessity to name the new scenario becomes only that, **a necessity**. So, the new *Dat Community Ecosystem* is here. A conglomerate of projects with interconnected stacks all being part of this specific decentralized “neighbourhood”. Now the ecosystem feels bigger and stronger.
 
