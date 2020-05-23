@@ -22,7 +22,7 @@ Then, the other interesting point that derives directly from the post, is about 
 
 It’s also important to notice that behind Hypercore Protocol there are two companies that were steadily pushing forward the old Dat landscape and now they bring us to this new _Hyper_ place, these are Blue Link Labs (the company behind Beaker) and [Hyperdivision](https://hyperdivision.dk/).
 Knowing all this can help to clarify and hence improve a challenging issue that haunted Dat organization in the past (and quite possibly many other open source projects too), we are talking about *communication issues*. And for better communication, one important requirement is transparency, without transparency you can’t have clear processes and reaching a goal this way becomes really hard.
-Having a separate organization, detached from personal accounts, with clear faces behind the final decisions and an open process for introducing new changes, (eg: limited resources and bandwidth) give us a much more _defined_ and clear shape. Making things better becomes easier if we start from this point.
+Having a separate organization, detached from personal accounts, with clear faces behind the final decisions and an open process for introducing new changes (all this in a context with limited resources and bandwidth) give us a much more _defined_ and clear shape. Making things better becomes easier if we start from this point.
 
 ## The new Dat Community Ecosystem
 
