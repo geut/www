@@ -12,7 +12,6 @@ export default class Meta extends Component {
   render() {
     const { author, tags = [], date } = this.props
 
-    console.log(author)
     const allAuthors = [].concat(author)
       .map(postAuthor => authors[postAuthor] || { name: postAuthor })
 
