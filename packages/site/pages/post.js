@@ -73,7 +73,7 @@ class Post extends Component {
 
           header p {
             color: var(--grey600);
-            font-weight: 100;
+            font-weight: 200;
             font-size: 1.8em;
             padding: 0.5rem;
             border: 0px;
@@ -81,7 +81,7 @@ class Post extends Component {
 
           .post {
             max-width: 780px;
-            margin: calc(var(--spacing) * 4) auto;
+            margin: calc(var(--spacing) * 4) auto calc(var(--spacing) * 20) auto;
             padding: calc(var(--spacing) * 6);
           }
 
@@ -90,6 +90,9 @@ class Post extends Component {
               font-size: 3em;
               font-size: 10vw;
               hyphens: auto;
+            }
+            header p {
+              font-size: 1.35em;
             }
           }
         `}</style>

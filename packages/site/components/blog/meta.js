@@ -10,12 +10,16 @@ import authors from '../../authors'
 export default class Meta extends Component {
 
   render() {
-    const { author: postAuhtor, tags = [], date } = this.props
-    const author = authors[postAuhtor]
+    const { author, tags = [], date } = this.props
+
+    const allAuthors = [].concat(author)
+      .map(postAuthor => authors[postAuthor] || { name: postAuthor })
 
     return (
       <React.Fragment>
-        <Author {...author} />
+        <div className="inline">
+          {allAuthors.map(author => <Author key={author.name} {...author} /> )}
+        </div>
         <div className="inline">
           <div className="date">{format(parse(date), 'MMMM D, YYYY')}</div>
           <Tags tags={tags} />
@@ -24,6 +28,7 @@ export default class Meta extends Component {
           .inline {
             display: inline-flex;
             align-items: center;
+            margin: var(--spacing) 0;
           }
           .date {
             margin: var(--spacing) 0;
@@ -32,7 +37,10 @@ export default class Meta extends Component {
 
           @media screen and (max-width: 680px) {
             .inline {
-              display: block;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin: var(--spacing) 0;
             }
           }
         `}</style>
