@@ -82,7 +82,7 @@ class Blog extends Component {
             box-shadow: -8px -5px 0px 8px var(--violet);
           }
 
-          header p {   
+          header p {
             padding: var(--spacing);
             color: var(--grey600);
             font-weight: 100;
@@ -115,7 +115,7 @@ class Blog extends Component {
               font-size: 4.5em;
             }
             header p {
-              font-size: 1.5em;
+              font-size: 1.35em;
             }
           }
 
