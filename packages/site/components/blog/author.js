@@ -16,7 +16,6 @@ export default class Author extends Component {
           .inline {
             display: inline-flex;
             align-items: center;
-            margin: var(--spacing) 0;
           }
 
           .avatar {

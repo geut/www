@@ -28,6 +28,7 @@ export default class Meta extends Component {
           .inline {
             display: inline-flex;
             align-items: center;
+            margin: var(--spacing) 0;
           }
           .date {
             margin: var(--spacing) 0;
@@ -36,7 +37,10 @@ export default class Meta extends Component {
 
           @media screen and (max-width: 680px) {
             .inline {
-              display: block;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin: var(--spacing) 0;
             }
           }
         `}</style>
