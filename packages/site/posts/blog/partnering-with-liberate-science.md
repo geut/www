@@ -2,7 +2,9 @@
 page: post
 title: "Partnering with Liberate Science"
 subtitle: "We are very excited about this new partnership which consolidates all the good work we have been doing together in the last few months"
-author: diego
+author: 
+  - diego
+  - ChrisHartgerink
 tags:
   - libscie
   - partner

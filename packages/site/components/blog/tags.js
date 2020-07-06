@@ -19,12 +19,12 @@ export default class Tags extends Component {
 
           .tag {
             margin: calc(var(--spacing) * .5);
-            padding: calc(var(--spacing) * .5);
+            padding: calc(var(--spacing) * 1);
             line-height: 1.2em;
             background-color: var(--violet);
-            color: var(--grey50);
-            font-size: .75em;
-            font-weight: 200;
+            color: var(--grey200);
+            font-size: .9em;
+            font-weight: 400;
           }
         `}</style>
       </div>
