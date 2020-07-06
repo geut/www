@@ -81,7 +81,7 @@ class Post extends Component {
 
           .post {
             max-width: 780px;
-            margin: calc(var(--spacing) * 4) auto;
+            margin: calc(var(--spacing) * 4) auto calc(var(--spacing) * 20) auto;
             padding: calc(var(--spacing) * 6);
           }
 
