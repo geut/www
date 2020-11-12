@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default (props) => {
+const Logo = props => {
   return (
     <svg {...props} type="image/svg+xml" x="0px" y="0px" viewBox="0 0 220 160" xmlSpace="preserve">
       <g>
@@ -48,4 +48,6 @@ export default (props) => {
       <image href="" src="./static/images/logo.png" alt="GEUT logo" className="logo-fallback"></image>
     </svg>
   )
-}
+};
+
+export default Logo;

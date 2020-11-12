@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -8,10 +8,9 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600|Montserrat:200,400,600" rel="stylesheet" />
 
           <link href="/static/css/gridlex.min.css" media="all" rel="stylesheet" type="text/css" />
@@ -20,7 +19,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }

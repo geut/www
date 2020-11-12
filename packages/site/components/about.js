@@ -7,7 +7,7 @@ import Twitter from './icons/twitter'
 
 const sortByIsFounder = ({ data: { founder: a = false } }, { data: { founder: b = false } }) => Number(b) - Number(a)
 
-export default ({ members, authors }) => {
+const About = ({ members, authors }) => {
   const team = members.sort(sortByIsFounder)
   return (
     <Section title="About Us" subtitle="Meet the Team">
@@ -106,4 +106,6 @@ export default ({ members, authors }) => {
     `}</style>
     </Section>
   )
-}
+};
+
+export default About;
