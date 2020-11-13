@@ -37,7 +37,6 @@ const Navigation = ({ main = false, top = false, ...props }) => <nav role="navig
       <li className="logo">
         <a href="/"><Logo className="logo" width="80px" opacity={1}/></a>
       </li>)}
-    <li className="mission"><Link href="/#our-mission"><a onClick={scrollAnimated}>Mission</a></Link> </li>
     <li className="about"><Link href="/#about-us"><a  onClick={scrollAnimated}>About Us</a></Link></li>
     <li className="contact"><Link href="/#contact-us"><a  onClick={scrollAnimated}>Contact</a></Link></li>
     <li className="blog"><Link href="/blog"><a>Blog</a></Link></li>
@@ -84,13 +83,13 @@ const Navigation = ({ main = false, top = false, ...props }) => <nav role="navig
 
     @media screen and (max-width: 680px) {
       nav ul {
-        font-size: .85em;
+        font-size: .75em;
       }
 
-      nav li.mission,
-      nav li.about {
-        display: none;
-      } 
+      nav li.logo {
+        flex: 1 0 auto;
+
+      }
     }
 
   `}</style>
