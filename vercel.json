@@ -2,23 +2,10 @@
   "version": 2,
   "name": "geut-www",
   "builds": [
-    {
-      "src": "packages/contact/index.js",
-      "use": "@now/node"
-    },
     { 
-      "src": "packages/site/package.json",
+      "src": "package.json",
       "use": "@now/static-build",
       "config": { "distDir": "out" }
     }
-  ],
-  "routes": [
-    { "src": "/api/contact", "methods": ["POST"], "dest":"packages/contact/index.js" },
-    { "src": "/(.*)", "dest": "packages/site/$1" }
-  ],
-  "env": {
-    "MAIL_TO": "contact@geutstudio.com",
-    "MAIL_USER": "@zoho-user",
-    "MAIL_PASSWORD": "@zoho-password"
-  }
+  ]
 }
