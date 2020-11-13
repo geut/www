@@ -61,28 +61,16 @@ class Index extends Component {
   
   render() {
     const { posts } = this.props
-    const sections = posts.filter(inCategory('front')).slice().sort(sortByOrder)
     const members = posts.filter(inCategory('team'))
     return (
       <React.Fragment>
-        <section className="hero" ref={this.hero}>                    
+        <section className="hero" ref={this.hero}>
           <header>
             <Logo className="logo" width="70vmin" opacity={0}/>
             <h1 className="title">{name}</h1>
             <Navigation main className="nav" style={{ opacity: 0 }}/>
           </header>          
         </section>
-        {sections.map(post => (
-          <Section key={post.data.name} {...post.data} className={post.data.section}>
-            <Content
-              {...post}
-              renderers={{
-                p: Paragraph
-              }}
-              className="grid-1-center content"
-            />
-          </Section>
-        ))}
         <About members={members} authors={authors} />
         <Contact />
         <Footer />
@@ -122,8 +110,7 @@ class Index extends Component {
 }
 
 export default compose(
-  withPostsFilterBy(inCategory('team')),
-  withPostsFilterBy(inCategory('front'))
+  withPostsFilterBy(inCategory('team'))
 )(Index)
 
 
