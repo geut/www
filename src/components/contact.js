@@ -10,7 +10,7 @@ export default class Contact extends Component {
         <div className="grid-1 container">
             <div className="col-12">            
               <h1>{mail}</h1>
-              <p><b>We would Love to Hear from You.</b> Drops Us a Line.</p>
+              <p> Drops Us a Line. <b>We would Love to Hear from You.</b></p>
             </div>
         </div>
         <style jsx>{`
@@ -23,6 +23,7 @@ export default class Contact extends Component {
           }
           
           h1 {
+            font-weight: bold;
             font-size: 3em;
             color: var(--blue);
           }
@@ -38,7 +39,7 @@ export default class Contact extends Component {
           }
           @media screen and (max-width: 680px) {
             h1 {
-              font-size: 1.8em;
+              font-size: 1.2em;
             }
             p {
               margin-top: -1em;
