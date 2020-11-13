@@ -9,7 +9,7 @@ export default class Contact extends Component {
       <Section title="Contact US" subtitle="Get in touch" className="contact">
         <div className="grid-1 container">
             <div className="col-12">            
-              <h1>{mail}</h1>
+              <h1><a href={`mailto:${mail}`} title="Contact email">{mail}</a></h1>
               <p> Drops Us a Line. <b>We would Love to Hear from You.</b></p>
             </div>
         </div>
@@ -25,7 +25,11 @@ export default class Contact extends Component {
           h1 {
             font-weight: bold;
             font-size: 3em;
+          }
+          
+          h1 a {
             color: var(--blue);
+            text-decoration: none;
           }
 
           p {
