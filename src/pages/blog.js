@@ -110,7 +110,7 @@ class Blog extends Component {
             font-size: 1.2em;
           }
 
-          .post img.intro {
+          .post :global(img.intro) {
             float: right;
             margin: 0px 0px 15px 15px;
           }
@@ -124,7 +124,7 @@ class Blog extends Component {
               font-size: 1.35em;
             }
 
-            .post img.intro {
+            .post :global(img.intro) {
               float: none;
             }
           }
