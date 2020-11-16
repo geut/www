@@ -84,6 +84,16 @@ class Post extends Component {
             padding: calc(var(--spacing) * 6);
           }
 
+          .post :global(.content) {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .post :global(.content img.intro) {
+            align-self: flex-start;
+          }
+
+
           @media screen and (max-width: 680px) {
             header h1 {
               font-size: 3em;
@@ -92,6 +102,10 @@ class Post extends Component {
             }
             header p {
               font-size: 1.35em;
+            }
+
+            .post :global(.content img.intro) {
+              align-self: center;
             }
           }
         `}</style>

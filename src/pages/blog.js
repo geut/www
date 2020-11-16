@@ -110,11 +110,6 @@ class Blog extends Component {
             font-size: 1.2em;
           }
 
-          .post :global(img.intro) {
-            float: right;
-            margin: 0px 0px 15px 15px;
-          }
-
           @media screen and (max-width: 680px) {
             header h1 {
               font-size: 4.5em;
@@ -122,10 +117,6 @@ class Blog extends Component {
 
             header p {
               font-size: 1.35em;
-            }
-
-            .post :global(img.intro) {
-              float: none;
             }
           }
 
