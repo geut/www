@@ -12,9 +12,9 @@ import Footer from '../components/footer'
 class Blog extends Component {
   render() {
     const { posts } = this.props
-    
+
     posts.sort(sortByDate)
-    
+
     return (
       <React.Fragment>
         <section className="hero container">
@@ -110,12 +110,22 @@ class Blog extends Component {
             font-size: 1.2em;
           }
 
+          .post img.intro {
+            float: right;
+            margin: 0px 0px 15px 15px;
+          }
+
           @media screen and (max-width: 680px) {
             header h1 {
               font-size: 4.5em;
             }
+
             header p {
               font-size: 1.35em;
+            }
+
+            .post img.intro {
+              float: none;
             }
           }
 
