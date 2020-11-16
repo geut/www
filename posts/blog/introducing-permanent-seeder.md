@@ -4,6 +4,7 @@ title: "Introducing: The Permanent Seeder"
 subtitle: "Today, in tandem with Liberate Science, we are launching together the brand new Permanent Seeder. The hyperdrives super seeder. Continue reading to learn more about it."
 author:
   - diego
+  - esteban
   - ChrisHartgerink
 tags:
   - product
