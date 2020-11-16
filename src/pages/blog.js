@@ -105,8 +105,8 @@ class Blog extends Component {
 
           .post p {
             margin-top: var(--spacing);
-            color: var(--grey600);
-            font-weight: 100;
+            color: var(--grey700);
+            font-weight: 400;
             font-size: 1.2em;
           }
 
