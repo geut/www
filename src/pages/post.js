@@ -73,8 +73,7 @@ class Post extends Component {
 
           header p {
             color: var(--grey600);
-            font-weight: 200;
-            font-size: 1.8em;
+            font-size: 1.65em;
             padding: 0.5rem;
             border: 0px;
           }
